@@ -1,0 +1,53 @@
+\documentclass[a4paper,12pt]{article}
+
+% Packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\newtheoremstyle{thmstylethree}% Definition
+{18pt plus2pt minus1pt}% Space above
+{18pt plus2pt minus1pt}% Space below
+{\small\normalfont}% Body font
+{0pt}% Indent amount
+{\small\bfseries}% Theorem head font
+{}% Punctuation after theorem head
+{.5em}% Space after theorem headi
+{\thmname{#1}\thmnumber{\@ifnotempty{#1}{ }\@upn{#2}}%
+  \thmnote{ {\the\thm@notefont(#3)}}}
+\newtheorem{definition}{Definition}
+
+
+% Title and Author
+\title{Turbulence Review}
+\author{Your Name}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{definition}{Equation de Navier-Stokes}
+    \begin{align}
+        &\frac{\partial \rho}{\partial t}+\overrightarrow{\nabla}\cdot (\rho \overrightarrow{\nabla})=0 \quad \text{Equation de continuité} \\
+        &\frac{\partial(\rho \overrightarrow{V})}{\partial t}+\overrightarrow{\nabla}\cdot(\rho\overrightarrow{V}\overrightarrow{V})=\overrightarrow{\nabla}\cdot \textbf{P}+\rho\overrightarrow{g} \quad \text{Equation de bilan de la quantité de mouvement} \\
+        &
+    \end{align}
+\end{definition}
+\begin{definition}{Kolmogorov microsscales}
+    Kolmogorov microsscales are the smallest scales in turbulent flow. There are defined by 
+    \begin{align}
+        \eta &= \left( \frac{\nu^3}{\varepsilon} \right)^{1/4} \quad \text{length scale} \\
+        \tau_\eta &= \sqrt{\frac{\nu}{\varepsilon}} \quad \text{time scale} \\
+        u_\eta &= (\nu \varepsilon)^{1/4} \quad \text{velocity scale}
+    \end{align}
+    where \(\varepsilon\) is the average rate of dissipation of turbulence kinetic energy per unit mass and \(\nu\) is the kinematic viscosity of the fluid
+\end{definition}
+
+\bibliographystyle{plain}
+\bibliography{references} % Add a references.bib file for bibliography
+
+\end{document}

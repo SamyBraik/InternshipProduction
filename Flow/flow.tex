@@ -1,0 +1,132 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsfonts, amsmath}
+\usepackage[margin=1in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{comment}
+
+\title{Generative models ``review''}
+\author{Samy Braik}
+\date{April 2025}
+
+\begin{document}
+
+\maketitle
+
+\section{Normalizing flow}
+Let $X_0\in\mathbb{R}^d$ distributed according to $q$ a simple distribution, a Gaussian for example, and $p$ a target distribution.  The goal is to 
+\\
+Consider $f:\mathbb{R}^d\rightarrow\mathbb{R}^d$, called a normalizing flow, an invertible and differentiable function and define $X_1=f(X_0)$. 
+We are able to determine \(p\), in terms of \(q\), 
+\begin{align}
+    p(X_1)&=q(f^{-1}(X_1))\left| \det\frac{\partial f^{-1}}{\partial X_1}(X_1) \right| = q(X_0)\left| \det \frac{\partial f}{\partial X_0}(X_0) \right|^{-1} \\
+    &\implies \log p(X_1)=\log q(X_0) - \log \left|  \det \frac{\partial f}{\partial X_0}(X_0) \right|  
+\end{align}
+%and since the transformation is invertible
+%\begin{align}
+%    p(x_0)=q(f(x_0))\left|  \det\frac{\partial f}{\partial x_0}(x_0) \right|
+%\end{align}
+\subsection{In practice}
+Since the data could be highly non-Gaussian in nature, such a transformation $f$ is intractable.\\
+Therefore the goal is to learn $f_\theta$, approximation of $f$, such that $x_1 \simeq f_\theta^{-1}(x_0)$. \\
+A structure is imposed to $f_\theta$, we define $f_1\ldots f_k$ simpler function,  such that
+\begin{align}
+    f_\theta = f_k\circ f_{k-1}\circ\ldots\circ f_2\circ f_1
+\end{align}
+There is then, 
+\begin{align}
+    x_0\sim p_0=q, \quad f_1(x_0) = x_1 \implies x_1\sim p_1, f(x_1)=x_2 \ldots f(x_{k-1})=x_k \sim p_k = \hat{p} \simeq p
+\end{align}
+The objective function is the maximum log-likehood of the data
+\begin{align}
+    \theta^* = \max_{\theta} \sum_{i=1}^N \left[ \log q(f_\theta^{-1}(x^i)) + \sum_{k=1}^K \log \left| \det\frac{\partial f_k^{-1}}{\partial x_k}(x^i) \right| \right] 
+\end{align}
+
+\bigskip
+Normalizing flows requires invertibility of the mappings and an efficient way to compute the determinant of there Jacobian. Therefore, components have to be chosen carefully.
+
+\section{Flow}
+A $C^r$ flow is a time-dependent mapping $\phi : [0,1]\times \mathbb{R}^d\rightarrow\mathbb{R}^d$ implementing $\phi(t,x) \rightarrow \phi_t(x)$ such that for all $t\in[0,1]$, $\phi_t$ is a $C^r$ diffeomorphism in $x$.
+We define a flow model by applying a flow $\phi_t$ to the random value $X_0$
+\begin{align}\label{flow-model}
+    X_t=\phi_t(X_0), \quad t \in[0,1], X_0\sim p 
+\end{align}
+Alternatively, we can define a flow using a velocity field \(v_t:[0,1]\times\mathbb{R}^d\rightarrow \mathbb{R}^d\) implementing \(v:(t,x)\rightarrow v_t(x)\) via the following ODE 
+
+\begin{align}\label{ODE}
+    \partial_t \phi_t(x)&=v_t(\phi_t(x))\\
+    \phi_0(x)&=x \quad \text{initial condition}
+\end{align}
+
+We can derive a probability path as the marginal PDF of a flow model~\ref{flow-model} at time \(t\) by \(X_t\sim p_t\). This PDF is obtained by a push-forward formula 
+\begin{align}\label{pushforward}
+    p_t(x) = p(\phi^{-1}(x))|\det \partial_x \phi^{-1}(x)|
+\end{align} 
+Knowing \(v_t\) allow us to generate \(p_t\).
+
+\begin{comment}
+\section{Continuous normalizing flow}
+
+In continuous normalizing flow framework, \(f\) is obtained using a continuous dynamic 
+\begin{align}
+    \frac{\partial x_0}{\partial t} = f(x_t,t)
+\end{align}
+In continuous normalizing flows, \(f\) is obtzined by solving the neural ODE 
+\begin{align}
+    x_T = x_0+\int_0^T f(x_t,t)^{\theta} dt
+\end{align}
+
+CNF are trained by maximizing the log-likelyhood 
+\begin{align}
+    \mathcal{L}(\theta) = \mathbb{E}[\log p(x)]
+\end{align}
+\end{comment}
+
+\section{Flow matching}
+%Combination of CNF and Diffusion models
+
+Using the notions defined in the previous section. The Flow Matching framework is as follow: 
+We have a known source distribution \(q\) and an unkown target distribution \(p\), we want to retrieve the probability path \(p_t\) interpolating from \(p_0=q\) to \(p_1=p\). Therefore we need to learn a velocity field \(v_t^\theta\) (a neural network) to generate such a path, and by solving the ODE~\ref{ODE} sample according to \(p\) (approximation). In order to learn \(v_t^\theta\) the loss to minimize is 
+\begin{align}
+    \mathcal{L}_\text{FM}(\theta):=\mathbb{E}[\|v_t(X_t)-v_t\theta(X_t)\|^2]= \mathbb{E}[\|v_t\theta(X_t)-\dot{X_t}\|^2] + c
+\end{align} 
+where \(c = \mathbb{E}[\|\dot{X_t}\|^2]-\mathbb{E}[\|v_t(X_t)\|^2]\) constant with respect to \(s\). \\
+There is no constraint on the neural network and the invertibility needed in~\ref{pushforward} is due to optimal transport argument.
+
+\section{Diffusion}
+The general framework of diffusion is divided in two phases. We start from a random variable distributed according to our target distribution \( p \), add noise until it reaches an easy-to-sample distribution \(q\), a Gaussian. Then we denoise from \(q\) to get back to \(p\). 
+
+\bigskip
+
+We consider \(T\in\mathbb{N}^{*}\), a noise schedule \(\beta:[0,T]\rightarrow \mathbb{R}_{+}^{*}\), assumed to be continuous and non-decreasing, \(B_t\) a Brownian motion at time \(t\).
+
+\textbf{Forward and Backward processes}
+\begin{align}
+    d\overrightarrow{X}_t = \frac{-\beta(t)}{2\sigma^2}\overrightarrow{X}_t dt + \sqrt{\beta(t)}dB_t, \quad \overrightarrow{X}_0\sim p 
+    \quad \text{Forward process}
+\end{align} 
+
+\begin{align}
+    d\overrightarrow{X}_t=\left(  \frac{\beta(T-t)}{2\sigma^2}\overleftarrow{X}_t+\beta(T-t)\nabla\log p_{T-t}\left(\overleftarrow{X}_t \right)  \right)dt + \sqrt{\beta(T-t)}dB_t, \quad \overleftarrow{X}_0\sim p_T \quad \text{Backward process}
+\end{align}
+
+The thing is we only noise the RV until a finite time \(T\) therefore \(p_T\not= p\) but with a good choice of \(T\) and \(\beta\), we can hope that \(p_T\simeq p\). Furthermore, the backward process allows us to retrieve p but the score \(\nabla p_t\) is unkown at each time \(t\). \\
+To adress this problem, denoising score matching is used.  
+
+\bigskip
+\textbf{Denoising Score Matching} \newline
+Let \(s:\mathbb{R}^d\rightarrow\mathbb{R}^d\). \(X\) a random variable with density \(p\) and \(\varepsilon\) an independant random variable with density \(g\), a centered Gaussian density. Then 
+
+\begin{align}
+    \mathbb{E}[|\nabla \log p_t (X+\varepsilon)-s(X+\varepsilon)|^2]&=c+\mathbb{E}[|\nabla \log g(\varepsilon)-s(X+\varepsilon)|^2]\\
+    &=c+\mathbb{E}[|(-\varepsilon/\text{Var} (\varepsilon))g(\varepsilon)-s(X+\varepsilon)|^2]
+\end{align}
+with \(c\) a constant not related to \(s\).
+
+With a good choice of neural network \(s_\theta\) (data dependent) and noise schedule, we can generate using the backward process.
+
+\nocite{Coste_2025}
+\nocite{lipman2024flowmatchingguidecode}
+\bibliographystyle{plain}
+\bibliography{references}
+\end{document}
