@@ -9,4 +9,10 @@ Yaron Lipman, Marton Havasi, Peter Holderrieth, Neta Shaul, Matt Le, Brian
   Karrer, Ricky T.~Q. Chen, David Lopez-Paz, Heli Ben-Hamu, and Itai Gat.
 \newblock Flow matching guide and code, 2024.
 
+\bibitem{strasman2025analysisnoiseschedulescorebased}
+Stanislas Strasman, Antonio Ocello, Claire Boyer, Sylvain~Le Corff, and Vincent
+  Lemaire.
+\newblock An analysis of the noise schedule for score-based generative models,
+  2025.
+
 \end{thebibliography}

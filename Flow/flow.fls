@@ -1,6 +1,6 @@
-PWD c:\Users\BRAIK\Desktop\LaTeXStage\Flow
+PWD c:\Users\BRAIK\Documents\InternshipProduction\Flow
 INPUT C:\Users\BRAIK\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT c:\Users\BRAIK\Desktop\LaTeXStage\Flow\flow.tex
+INPUT c:\Users\BRAIK\Documents\InternshipProduction\Flow\flow.tex
 OUTPUT flow.log
 INPUT C:\Users\BRAIK\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
 INPUT C:\Users\BRAIK\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
@@ -148,6 +148,7 @@ INPUT C:\Users\BRAIK\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\sym
 INPUT C:\Users\BRAIK\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
 INPUT C:\Users\BRAIK\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
 INPUT C:\Users\BRAIK\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
+INPUT C:\Users\BRAIK\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
 INPUT C:\Users\BRAIK\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
 INPUT C:\Users\BRAIK\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
 INPUT C:\Users\BRAIK\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
@@ -156,9 +157,8 @@ INPUT C:\Users\BRAIK\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\sym
 INPUT C:\Users\BRAIK\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Users\BRAIK\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
 INPUT C:\Users\BRAIK\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm5.tfm
-INPUT C:\Users\BRAIK\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
-INPUT C:\Users\BRAIK\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
 INPUT C:\Users\BRAIK\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx10.tfm
+INPUT C:\Users\BRAIK\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
 INPUT .\flow.bbl
 INPUT .\flow.bbl
 INPUT flow.bbl

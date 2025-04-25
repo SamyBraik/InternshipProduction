@@ -5,7 +5,7 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage{comment}
 
-\title{Generative models ``review''}
+\title{Statistical approach ``review''}
 \author{Samy Braik}
 \date{April 2025}
 
@@ -13,7 +13,9 @@
 
 \maketitle
 
-\section{Normalizing flow}
+Generative models more or less learn the true distribution but mostly generate new samples according to this distribution.   
+\section{Generative models}
+\subsection{Normalizing flow}
 Let $X_0\in\mathbb{R}^d$ distributed according to $q$ a simple distribution, a Gaussian for example, and $p$ a target distribution.  The goal is to 
 \\
 Consider $f:\mathbb{R}^d\rightarrow\mathbb{R}^d$, called a normalizing flow, an invertible and differentiable function and define $X_1=f(X_0)$. 
@@ -26,7 +28,7 @@ We are able to determine \(p\), in terms of \(q\),
 %\begin{align}
 %    p(x_0)=q(f(x_0))\left|  \det\frac{\partial f}{\partial x_0}(x_0) \right|
 %\end{align}
-\subsection{In practice}
+\textbf{In practice} \\
 Since the data could be highly non-Gaussian in nature, such a transformation $f$ is intractable.\\
 Therefore the goal is to learn $f_\theta$, approximation of $f$, such that $x_1 \simeq f_\theta^{-1}(x_0)$. \\
 A structure is imposed to $f_\theta$, we define $f_1\ldots f_k$ simpler function,  such that
@@ -45,7 +47,7 @@ The objective function is the maximum log-likehood of the data
 \bigskip
 Normalizing flows requires invertibility of the mappings and an efficient way to compute the determinant of there Jacobian. Therefore, components have to be chosen carefully.
 
-\section{Flow}
+\subsection{Flow}
 A $C^r$ flow is a time-dependent mapping $\phi : [0,1]\times \mathbb{R}^d\rightarrow\mathbb{R}^d$ implementing $\phi(t,x) \rightarrow \phi_t(x)$ such that for all $t\in[0,1]$, $\phi_t$ is a $C^r$ diffeomorphism in $x$.
 We define a flow model by applying a flow $\phi_t$ to the random value $X_0$
 \begin{align}\label{flow-model}
@@ -65,7 +67,7 @@ We can derive a probability path as the marginal PDF of a flow model~\ref{flow-m
 Knowing \(v_t\) allow us to generate \(p_t\).
 
 \begin{comment}
-\section{Continuous normalizing flow}
+\subsection{Continuous normalizing flow}
 
 In continuous normalizing flow framework, \(f\) is obtained using a continuous dynamic 
 \begin{align}
@@ -82,7 +84,7 @@ CNF are trained by maximizing the log-likelyhood
 \end{align}
 \end{comment}
 
-\section{Flow matching}
+\subsection{Flow matching}
 %Combination of CNF and Diffusion models
 
 Using the notions defined in the previous section. The Flow Matching framework is as follow: 
@@ -93,7 +95,7 @@ We have a known source distribution \(q\) and an unkown target distribution \(p\
 where \(c = \mathbb{E}[\|\dot{X_t}\|^2]-\mathbb{E}[\|v_t(X_t)\|^2]\) constant with respect to \(s\). \\
 There is no constraint on the neural network and the invertibility needed in~\ref{pushforward} is due to optimal transport argument.
 
-\section{Diffusion}
+\subsection{Diffusion}
 The general framework of diffusion is divided in two phases. We start from a random variable distributed according to our target distribution \( p \), add noise until it reaches an easy-to-sample distribution \(q\), a Gaussian. Then we denoise from \(q\) to get back to \(p\). 
 
 \bigskip
@@ -107,7 +109,7 @@ We consider \(T\in\mathbb{N}^{*}\), a noise schedule \(\beta:[0,T]\rightarrow \m
 \end{align} 
 
 \begin{align}
-    d\overrightarrow{X}_t=\left(  \frac{\beta(T-t)}{2\sigma^2}\overleftarrow{X}_t+\beta(T-t)\nabla\log p_{T-t}\left(\overleftarrow{X}_t \right)  \right)dt + \sqrt{\beta(T-t)}dB_t, \quad \overleftarrow{X}_0\sim p_T \quad \text{Backward process}
+    d\overleftarrow{X}_t=\left(  \frac{\beta(T-t)}{2\sigma^2}\overleftarrow{X}_t+\beta(T-t)\nabla\log p_{T-t}\left(\overleftarrow{X}_t \right)  \right)dt + \sqrt{\beta(T-t)}dB_t, \quad \overleftarrow{X}_0\sim p_T \quad \text{Backward process}
 \end{align}
 
 The thing is we only noise the RV until a finite time \(T\) therefore \(p_T\not= p\) but with a good choice of \(T\) and \(\beta\), we can hope that \(p_T\simeq p\). Furthermore, the backward process allows us to retrieve p but the score \(\nabla p_t\) is unkown at each time \(t\). \\
@@ -125,8 +127,28 @@ with \(c\) a constant not related to \(s\).
 
 With a good choice of neural network \(s_\theta\) (data dependent) and noise schedule, we can generate using the backward process.
 
+
+\section{Nonparametric density estimation}
+Another approach is to use density estimation. Consider a dataset \((X_1,\ldots,X_n)\) all having the same density \(f\). The goal is to estimate \(f\). 
+
+\subsection{Kernel estimatior}
+Consider a function \(K:\mathbb{R}\rightarrow\mathbb{R}\) integrable such that \(\int K(u)du=1\), the kernel estimator is defined, with \(h>0, x\in\mathbb{R}\), by 
+\begin{align}
+\hat{f}_h(x):=\frac{1}{nh}\sum_{j=1}^n K(\frac{x-X_j}{h})=\frac{1}{n}K_h(x-X_j)
+\end{align}
+The choice of \(h\) is critical since it governs the bias-variance tradeoff. To choose the optimal \(h\) few methods could be used like Cross validation or Goldenschlugger-Lepski.
+
+\subsection{Projection estimator}
+To build this estimator, we add another assumption which is \(f\in L_2(A), A\subset \mathbb{R}\). \\
+Let \((\phi_j)_{j\le 1}\) an Hilbert basis of \(L_2(A)\), the estimator is defined by 
+\begin{align}
+    \hat{f}_m=\sum_{i=1}^m\hat{a}_j\varphi_j, \quad \hat{a}_j=\frac{1}{n}\sum_{i=1}^n \varphi_j(X_i)
+\end{align}
+Just like the previous case, the choice of the value \(m\) is crucial, and methods like cross validation and penalization help choosing the best model.
+
 \nocite{Coste_2025}
 \nocite{lipman2024flowmatchingguidecode}
+\nocite{strasman2025analysisnoiseschedulescorebased}
 \bibliographystyle{plain}
 \bibliography{references}
 \end{document}
