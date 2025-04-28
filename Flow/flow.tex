@@ -4,6 +4,7 @@
 \usepackage[margin=1in]{geometry}
 \usepackage[hidelinks]{hyperref}
 \usepackage{comment}
+\usepackage{parskip}
 
 \title{Statistical approach ``review''}
 \author{Samy Braik}
@@ -12,9 +13,10 @@
 \begin{document}
 
 \maketitle
-To learn and sample from an unobserved probability distribution, generative models are the go-to techniques. They more or less learn the true distribution but they are mostly effective at generating new data. Density estimation is another paradigm. With data sharing the same density, the unique goal is to estimate this density.
+To learn and sample from an unobserved probability distribution, generative models are the go-to techniques. They more or less learn the true distribution but they are mostly effective at generating new data. Density estimation focuses on the first goal. Although, I argue that we could sample according to a good density estimation.      
 
 \section{Generative models}
+All the methods described in this section follow the same framework. They want to link an unknown distribution with density \(p\) to a simpler distribution with density written \(q\). Either directly like the flow methods or up to a certain degree of precision like diffusion models.
 \subsection{Normalizing flow}
 Let $X_0\in\mathbb{R}^d$ distributed according to $q$ a simple distribution, a Gaussian for example, and $p$ a target distribution.  The goal is to 
 \\
@@ -28,7 +30,7 @@ We are able to determine \(p\), in terms of \(q\),
 %\begin{align}
 %    p(x_0)=q(f(x_0))\left|  \det\frac{\partial f}{\partial x_0}(x_0) \right|
 %\end{align}
-\textbf{In practice} \\
+
 Since the data could be highly non-Gaussian in nature, such a transformation $f$ is intractable.\\
 Therefore the goal is to learn $f_\theta$, approximation of $f$, such that $x_1 \simeq f_\theta^{-1}(x_0)$. \\
 A structure is imposed to $f_\theta$, we define $f_1\ldots f_k$ simpler function,  such that
@@ -41,7 +43,7 @@ There is then,
 \end{align}
 The objective function is the maximum log-likehood of the data
 \begin{align}
-    \theta^* = \max_{\theta} \sum_{i=1}^N \left[ \log q(f_\theta^{-1}(x^i)) + \sum_{k=1}^K \log \left| \det\frac{\partial f_k^{-1}}{\partial x_k}(x^i) \right| \right] 
+    \mathcal{L}_\text{NF}(\theta) = -\sum_{i=1}^N \left[ \log q(f_\theta^{-1}(x^i)) + \sum_{k=1}^K \log \left| \det\frac{\partial f_k^{-1}}{\partial x_k}(x^i) \right| \right] 
 \end{align}
 
 \bigskip
@@ -96,7 +98,7 @@ where \(c = \mathbb{E}[\|\dot{X_t}\|^2]-\mathbb{E}[\|v_t(X_t)\|^2]\) constant wi
 There is no constraint on the neural network and the invertibility needed in~\ref{pushforward} is due to optimal transport argument.
 
 \subsection{Diffusion}
-The general framework of diffusion is divided in two phases. We start from a random variable distributed according to our target distribution \( p \), add noise until it reaches an easy-to-sample distribution \(q\), a Gaussian. Then we denoise from \(q\) to get back to \(p\). 
+The general framework of diffusion is divided in two phases. We start from a random variable distributed according to our target distribution \( p \), add noise until it reaches an easy-to-sample distribution \(q\) which is practically always a Gaussian. Then we denoise from \(q\) to get back to \(p\). 
 
 \bigskip
 
@@ -112,7 +114,7 @@ We consider \(T\in\mathbb{N}^{*}\), a noise schedule \(\beta:[0,T]\rightarrow \m
     d\overleftarrow{X}_t=\left(  \frac{\beta(T-t)}{2\sigma^2}\overleftarrow{X}_t+\beta(T-t)\nabla\log p_{T-t}\left(\overleftarrow{X}_t \right)  \right)dt + \sqrt{\beta(T-t)}dB_t, \quad \overleftarrow{X}_0\sim p_T \quad \text{Backward process}
 \end{align}
 
-The thing is we only noise the RV until a finite time \(T\) therefore \(p_T\not= q\) but with a good choice of \(T\) and \(\beta\), we can hope that \(p_T\simeq p\). Furthermore, the backward process allows us to retrieve p but the score \(\nabla p_t\) is unkown at each time \(t\). \\
+The thing is we only noise the random variable until a finite time \(T\) therefore \(p_T\not= q\) but with a good choice of \(T\) and \(\beta\), we can hope that \(p_T\simeq p\). Furthermore, the backward process allows us to retrieve p but the score \(\nabla p_t\) is unkown at each time \(t\). \\
 To adress this problem, denoising score matching is used.  
 
 \bigskip
@@ -131,7 +133,7 @@ With a good choice of neural network \(s_\theta\) (data dependent) and noise sch
 \section{Nonparametric density estimation}
 Another approach that could be useful in our situation is density estimation. Consider a dataset \((X_1,\ldots,X_n)\) all having the same density \(f\). The goal is to estimate \(f\). 
 
-\subsection{Kernel estimatior}
+\subsection{Kernel estimator}
 Consider a kernel function \(K\) which is a symmetric density, the kernel estimator is defined, with \(H\) a \(d\times d\) symmetric and positive definite matrix, \(x\in\mathbb{R}^d\), by 
 \begin{align}
 \hat{f}_H(x):=\frac{1}{n|\mathrm{H}|^{1/2}}\sum_{j=1}^n K\left(\mathrm{H}^{-1/2}(x-X_j)\right)=\frac{1}{n}K_\mathrm{H}\left(x-X_j\right)
@@ -150,6 +152,7 @@ Just like the previous case, the choice of the value \(m\) is crucial, and metho
 \bigskip
 Nonparametric estimation can be interesting when the number of observations \(n\) is big.
 
+\newpage
 \nocite{Coste_2025}
 \nocite{lipman2024flowmatchingguidecode}
 \nocite{strasman2025analysisnoiseschedulescorebased}
