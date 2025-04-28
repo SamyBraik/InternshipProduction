@@ -1,6 +1,6 @@
-PWD c:\Users\BRAIK\Desktop\LaTeXStage\PresStat
+PWD c:\Users\BRAIK\Documents\InternshipProduction\PresStat
 INPUT C:\Users\BRAIK\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT c:\Users\BRAIK\Desktop\LaTeXStage\PresStat\pres.tex
+INPUT c:\Users\BRAIK\Documents\InternshipProduction\PresStat\pres.tex
 OUTPUT pres.log
 INPUT C:\Users\BRAIK\AppData\Local\Programs\MiKTeX\tex\latex\beamer\beamer.cls
 INPUT C:\Users\BRAIK\AppData\Local\Programs\MiKTeX\tex\latex\beamer\beamer.cls

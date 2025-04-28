@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.4.22)  25 APR 2025 11:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.4.22)  25 APR 2025 16:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/BRAIK/Desktop/LaTeXStage/PresStat/pres.tex
-(c:/Users/BRAIK/Desktop/LaTeXStage/PresStat/pres.tex
+**c:/Users/BRAIK/Documents/InternshipProduction/PresStat/pres.tex
+(c:/Users/BRAIK/Documents/InternshipProduction/PresStat/pres.tex
 LaTeX2e <2024-11-01> patch level 1
 L3 programming layer <2024-12-25>
 (C:\Users\BRAIK\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamer.cls
@@ -745,14 +745,14 @@ Package rerunfilecheck Info: File `pres.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  21468 strings out of 473536
- 416794 string characters out of 5714956
+ 416926 string characters out of 5714956
  788114 words of memory out of 5000000
  44235 multiletter control sequences out of 15000+600000
  565894 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 128i,25n,123p,422b,567s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 128i,25n,123p,434b,567s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/BRAIK/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/BRAIK/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/BRAIK/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/BRAIK/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Users/BRAIK/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Users/BRAIK/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss8.pfb><C:/Users/BRAIK/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi10.pfb><C:/Users/BRAIK/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi8.pfb><C:/Users/BRAIK/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/BRAIK/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/BRAIK/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on pres.pdf (7 pages, 821549 bytes).
+Output written on pres.pdf (7 pages, 821547 bytes).
 PDF statistics:
  258 PDF objects out of 1000 (max. 8388607)
  16 named destinations out of 1000 (max. 500000)

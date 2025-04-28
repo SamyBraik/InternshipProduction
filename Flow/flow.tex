@@ -13,7 +13,7 @@
 
 \maketitle
 
-Generative models more or less learn the true distribution but mostly generate new samples according to this distribution.   
+Generative models more or less learn the true distribution but mostly generate new samples according to this distribution. While density estimation focus on getting the real density and sampling 
 \section{Generative models}
 \subsection{Normalizing flow}
 Let $X_0\in\mathbb{R}^d$ distributed according to $q$ a simple distribution, a Gaussian for example, and $p$ a target distribution.  The goal is to 
@@ -129,7 +129,7 @@ With a good choice of neural network \(s_\theta\) (data dependent) and noise sch
 
 
 \section{Nonparametric density estimation}
-Another approach is to use density estimation. Consider a dataset \((X_1,\ldots,X_n)\) all having the same density \(f\). The goal is to estimate \(f\). 
+Another approach that could be useful in our situation is density estimation. Consider a dataset \((X_1,\ldots,X_n)\) all having the same density \(f\). The goal is to estimate \(f\). 
 
 \subsection{Kernel estimatior}
 Consider a function \(K:\mathbb{R}\rightarrow\mathbb{R}\) integrable such that \(\int K(u)du=1\), the kernel estimator is defined, with \(h>0, x\in\mathbb{R}\), by 
