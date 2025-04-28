@@ -13,15 +13,16 @@
 \begin{document}
 \maketitle
 
-To learn and sample from an unobserved probability distribution, generative models are the go-to techniques. They more or less learn the true distribution but they are mostly effective at generating new data. Density estimation focuses on the first goal. Although, I argue that we could sample according to a good density estimation. I choose to consider methods with minimal to none assumption on the data.
+Two paradigm are mentioned in the following sections. The first one is generative models and the second one nonparametric density estimation. They are particularly relevant in our context because they make little to none assumptions on the shape of the data.
+Generative models are the go-to techniques to learn and sample from an unobserved probability distribution. They more or less learn the true distribution but they are mostly effective at generating new data. Density estimation focuses on the first goal. Although, I argue that we could sample according to a good density estimation.
 
 \section{Generative models}
 All the methods described in this section follow the same framework. They want to link an unknown distribution with density \(p\) to a simpler distribution with density written \(q\). Either directly like the flow methods or up to a certain degree of precision like diffusion models.
 \subsection{Normalizing flow}
-Let $X_0\in\mathbb{R}^d$ distributed according to $q$ a simple distribution, a Gaussian for example, and $p$ a target distribution.  The goal is to 
+Let \(X_0\in\mathbb{R}^d\) distributed according to \(q\) a simple distribution, a Gaussian for example, and \(p\) a target distribution.
 \\
-Consider $f:\mathbb{R}^d\rightarrow\mathbb{R}^d$, called a normalizing flow, an invertible and differentiable function and define $X_1=f(X_0)$. 
-We are able to determine \(p\), in terms of \(q\), 
+Consider \(f:\mathbb{R}^d\rightarrow\mathbb{R}^d\), an invertible and differentiable function and set \(X_1:=f(X_0)\) such that \(X_1\sim p\). 
+We are able to write \(p\), in terms of \(q\), 
 \begin{align}
     p(X_1)&=q(f^{-1}(X_1))\left| \det\frac{\partial f^{-1}}{\partial X_1}(X_1) \right| = q(X_0)\left| \det \frac{\partial f}{\partial X_0}(X_0) \right|^{-1} \\
     &\implies \log p(X_1)=\log q(X_0) - \log \left|  \det \frac{\partial f}{\partial X_0}(X_0) \right|  
@@ -31,23 +32,22 @@ We are able to determine \(p\), in terms of \(q\),
 %    p(x_0)=q(f(x_0))\left|  \det\frac{\partial f}{\partial x_0}(x_0) \right|
 %\end{align}
 
-Since the data could be highly non-Gaussian in nature, such a transformation $f$ is intractable.\\
-Therefore the goal is to learn $f_\theta$, approximation of $f$, such that $x_1 \simeq f_\theta^{-1}(x_0)$. \\
+Therefore the goal is to learn \(f_\theta\), approximation of \(f\), such that \(x_1 \simeq f_\theta^{-1}(x_0)\). \\
 A structure is imposed to $f_\theta$, we define $f_1\ldots f_k$ simpler function,  such that
 \begin{align}
     f_\theta = f_k\circ f_{k-1}\circ\ldots\circ f_2\circ f_1
 \end{align}
 There is then, 
 \begin{align}
-    x_0\sim p_0=q, \quad f_1(x_0) = x_1 \implies x_1\sim p_1, f(x_1)=x_2 \ldots f(x_{k-1})=x_k \sim p_k = \hat{p} \simeq p
+    x_0\sim p_0=q, \quad f_1(x_0) = x_1 \implies x_1\sim p_1,\quad f(x_1)=x_2 \ldots f(x_{k-1})=x_k \sim p_k = \hat{p} \simeq p
 \end{align}
-The objective function is the maximum log-likehood of the data
+To learn \(f_\theta\), we need to minimize the following loss function
 \begin{align}
     \mathcal{L}_\text{NF}(\theta) = -\sum_{i=1}^N \left[ \log q(f_\theta^{-1}(x^i)) + \sum_{k=1}^K \log \left| \det\frac{\partial f_k^{-1}}{\partial x_k}(x^i) \right| \right] 
 \end{align}
+where \(x^i\) are the samples from \(q\). \\
 
-\bigskip
-Normalizing flows requires invertibility of the mappings and an efficient way to compute the determinant of there Jacobian. Therefore, components have to be chosen carefully.
+%Normalizing flows requires invertibility of the mappings and an efficient way to compute the determinant of there Jacobian. Therefore, components have to be chosen carefully.
 
 \subsection{Flow}
 A $C^r$ flow is a time-dependent mapping $\phi : [0,1]\times \mathbb{R}^d\rightarrow\mathbb{R}^d$ implementing $\phi(t,x) \rightarrow \phi_t(x)$ such that for all $t\in[0,1]$, $\phi_t$ is a $C^r$ diffeomorphism in $x$.
@@ -66,7 +66,7 @@ We can derive a probability path as the marginal PDF of a flow model~\ref{flow-m
 \begin{align}\label{pushforward}
     p_t(x) = p(\phi^{-1}(x))|\det \partial_x \phi^{-1}(x)|
 \end{align} 
-Knowing \(v_t\) allow us to generate \(p_t\).
+%Knowing \(v_t\) allow us to generate \(p_t\).
 
 \begin{comment}
 \subsection{Continuous normalizing flow}
@@ -90,7 +90,7 @@ CNF are trained by maximizing the log-likelyhood
 %Combination of CNF and Diffusion models
 
 Using the notions defined in the previous section. The Flow Matching framework is as follow: 
-We have a known source distribution \(q\) and an unkown target distribution \(p\), we want to retrieve the probability path \(p_t\) interpolating from \(p_0=q\) to \(p_1=p\). Therefore we need to learn a velocity field \(v_t^\theta\) (a neural network) to generate such a path, and by solving the ODE~\ref{ODE} sample according to \(p\) (approximation). In order to learn \(v_t^\theta\) the loss to minimize is 
+We have a known source distribution \(q\) and an unkown target distribution \(p\), we set a probability path \(p_t\) interpolating from \(p_0=q\) to \(p_1=p\). We learn a velocity field \(v_t^\theta\) (a neural network) generating the path \(p_t\) by solving the ODE~\ref{ODE} sample according to \(p\) (approximation). In order to learn \(v_t^\theta\) the loss to minimize is 
 \begin{align}
     \mathcal{L}_\text{FM}(\theta):=\mathbb{E}[\|v_t(X_t)-v_t^\theta(X_t)\|^2]= \mathbb{E}[\|v_t^\theta(X_t)-\dot{X_t}\|^2] + c
 \end{align} 
@@ -114,8 +114,7 @@ We consider \(T\in\mathbb{N}^{*}\), a noise schedule \(\beta:[0,T]\rightarrow \m
     d\overleftarrow{X}_t=\left(  \frac{\beta(T-t)}{2\sigma^2}\overleftarrow{X}_t+\beta(T-t)\nabla\log p_{T-t}\left(\overleftarrow{X}_t \right)  \right)dt + \sqrt{\beta(T-t)}dB_t, \quad \overleftarrow{X}_0\sim p_T \quad \text{Backward process}
 \end{align}
 
-The thing is we only noise the random variable until a finite time \(T\) therefore \(p_T\not= q\) but with a good choice of \(T\) and \(\beta\), we can hope that \(p_T\simeq p\). Furthermore, the backward process allows us to retrieve p but the score \(\nabla p_t\) is unkown at each time \(t\). \\
-To adress this problem, denoising score matching is used.  
+The thing is we only noise the random variable until a finite time \(T\) therefore \(p_T\not= q\) but with a good choice of \(T\) and \(\beta\), we can hope that \(p_T\simeq q\). Furthermore, the backward process allows us to retrieve p but the score \(\nabla p_t\) is unkown at each time \(t\). To adress this problem, denoising score matching is used.  
 
 \bigskip
 \textbf{Denoising Score Matching} \newline
@@ -127,7 +126,7 @@ Let \(s:\mathbb{R}^d\rightarrow\mathbb{R}^d\). \(X\) a random variable with dens
 \end{align}
 with \(c\) a constant not related to \(s\).
 
-With a good choice of neural network \(s_\theta\) (data dependent) and noise schedule, we can generate using the backward process.
+With a good architecural choice of the neural network \(s_\theta\) (data dependent) and noise schedule, we can generate using the backward process.
 
 
 \section{Nonparametric density estimation}

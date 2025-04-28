@@ -50,10 +50,14 @@
 \end{frame}
 
 \begin{frame}{Normalizing flow}
-    Let \(X_0\sim q\) and \(X_1\sim p\). We want to learn \(f_\theta\) such that \(X_1 \simeq f_\theta^{-1}(X_0)=Z\sim p_Z\). To do that, we set a structure on \(f_\theta\), with \(f_1,\ldots,f_k\) simpler function (all parametrized by \(\theta\)) such that 
+    Let \(X_0\sim q\) and \(X_1\sim p\). We want to learn \(f_\theta\) such that \(X_1 \simeq f_\theta^(X_0)=Z\sim p_Z\). To do that, we set a structure on \(f_\theta\), with \(f_1,\ldots,f_k\) simpler function (all parametrized by \(\theta\)) such that 
     \[f_\theta=f_1\circ f_2\circ\ldots\circ f_k\] 
     We determine \(f_\theta\) by minimizing 
     \[\mathcal{L}_\text{NF}(\theta)= \mathbb{E}\left[-\log p_Z(f_\theta(x))-\log \left|\det \frac{\partial f_\theta}{\partial x}(x)\right|\right]\]
+\end{frame}
+
+\begin{frame}
+    A flow is 
 \end{frame}
 
 \begin{frame}{Flow matching}
