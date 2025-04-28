@@ -1,6 +1,7 @@
 \documentclass{beamer}
 
 \usetheme{default} % You can change the theme as needed
+\usepackage{array}
 
 \title{Presentation Title}
 \author{Samy Braik}
@@ -58,5 +59,21 @@
 \begin{frame}{Flow matching}
     
 \end{frame}
+
+
+
+\begin{frame}{Comparison}
+    \begin{tabular}{|l|c|r|}
+        \hline
+        Models & Pros & Cons \\
+        \hline
+        Diffusion & 1.2 &  \\
+        Normalizing flow & Exact density estimation & Computationaly intensive \\ 
+        Flow matching & Exact density estimation / SImulation free training  & rzreeq\\
+        \hline
+      \end{tabular}
+    \end{frame}
+
+
 
 \end{document}

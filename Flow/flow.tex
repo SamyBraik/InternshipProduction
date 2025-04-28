@@ -1,6 +1,6 @@
 \documentclass{article}
 \usepackage{graphicx} % Required for inserting images
-\usepackage{amsfonts, amsmath}
+\usepackage{amsfonts, amsmath, amssymb}
 \usepackage[margin=1in]{geometry}
 \usepackage[hidelinks]{hyperref}
 \usepackage{comment}
@@ -11,9 +11,9 @@
 \date{April 2025}
 
 \begin{document}
-
 \maketitle
-To learn and sample from an unobserved probability distribution, generative models are the go-to techniques. They more or less learn the true distribution but they are mostly effective at generating new data. Density estimation focuses on the first goal. Although, I argue that we could sample according to a good density estimation.      
+
+To learn and sample from an unobserved probability distribution, generative models are the go-to techniques. They more or less learn the true distribution but they are mostly effective at generating new data. Density estimation focuses on the first goal. Although, I argue that we could sample according to a good density estimation. I choose to consider methods with minimal to none assumption on the data.
 
 \section{Generative models}
 All the methods described in this section follow the same framework. They want to link an unknown distribution with density \(p\) to a simpler distribution with density written \(q\). Either directly like the flow methods or up to a certain degree of precision like diffusion models.
@@ -139,6 +139,7 @@ Consider a kernel function \(K\) which is a symmetric density, the kernel estima
 \hat{f}_H(x):=\frac{1}{n|\mathrm{H}|^{1/2}}\sum_{j=1}^n K\left(\mathrm{H}^{-1/2}(x-X_j)\right)=\frac{1}{n}K_\mathrm{H}\left(x-X_j\right)
 \end{align}
 with \(K_\mathrm{H}(x):= |\mathrm{H}|^{-1/2}K(\mathrm{H}^{-1/2}x)\). \\
+A very used kernel is the Gaussian kernel : \(K_\textrm{H}(x)=(2\pi)^{-d/2}|\textrm{H}|^{-1/2}e^{-\frac{1}{2} x^\intercal \textrm{H}^{-1} x}\) \\
 The choice of \(h\) is critical since it governs the bias-variance tradeoff. To choose the optimal \(h\) few methods could be used like Cross validation or Goldenschlugger-Lepski.
 
 \subsection{Projection estimator}
