@@ -2,6 +2,7 @@
 
 \usetheme{default} % You can change the theme as needed
 \usepackage{array}
+\usepackage{makecell}
 
 \title{Presentation Title}
 \author{Samy Braik}
@@ -11,10 +12,6 @@
 
 \begin{frame}
     \titlepage
-\end{frame}
-
-\begin{frame}{Outline}
-    \tableofcontents
 \end{frame}
 
 \section{Introduction}
@@ -50,14 +47,27 @@
 \end{frame}
 
 \begin{frame}{Normalizing flow}
-    Let \(X_0\sim q\) and \(X_1\sim p\). We want to learn \(f_\theta\) such that \(X_1 \simeq f_\theta^(X_0)=Z\sim p_Z\). To do that, we set a structure on \(f_\theta\), with \(f_1,\ldots,f_k\) simpler function (all parametrized by \(\theta\)) such that 
+    Let \(X_0\sim q\) and \(X_1\sim p\). We want to learn \(f_\theta\) such that \(X_1 \simeq f_\theta(X_0)=Z\sim p_Z\). To do that, we set a structure on \(f_\theta\), with \(f_1,\ldots,f_k\) simpler function (all parametrized by \(\theta\)) such that 
     \[f_\theta=f_1\circ f_2\circ\ldots\circ f_k\] 
     We determine \(f_\theta\) by minimizing 
     \[\mathcal{L}_\text{NF}(\theta)= \mathbb{E}\left[-\log p_Z(f_\theta(x))-\log \left|\det \frac{\partial f_\theta}{\partial x}(x)\right|\right]\]
 \end{frame}
 
-\begin{frame}
-    A flow is 
+\begin{frame}{Flow}
+    A flow is time dependant function \(\phi_t:[0,1]\times\mathbb{R}^d\rightarrow\mathbb{R}^d\). Using that we can define a flow model by applying a flow to  \((X_0,X_1)\)
+    \begin{align}
+        X_t &= \phi_t(X_0,X_1) \quad t\in[0,1],X_0\sim p, X_1\sim q 
+    \end{align}
+    Alternatively, by introducing a velocity field \(v_t:[0,1]\times\mathbb{R}^d\rightarrow\mathbb{R}^d\) the flow can be defined with the following ODE
+    \begin{align}\label{ODE}
+        \left\{
+            \begin{array}{ll}
+                \partial_t \phi_t(x)&=v_t(\phi_t(x))\\
+                \phi_0(x)&=x 
+            \end{array}
+        \right.
+    \end{align}
+        
 \end{frame}
 
 \begin{frame}{Flow matching}
@@ -67,16 +77,17 @@
 
 
 \begin{frame}{Comparison}
-    \begin{tabular}{|l|c|r|}
+    \begin{tabular}{|c|c|c|}
         \hline
         Models & Pros & Cons \\
         \hline
         Diffusion & 1.2 &  \\
-        Normalizing flow & Exact density estimation & Computationaly intensive \\ 
-        Flow matching & Exact density estimation / SImulation free training  & rzreeq\\
+        Normalizing flow & \makecell{Exact density estimation} & \makecell{Computationaly intensive} \\ 
+        Flow matching & \makecell{Exact density estimation \\ Simulation free training}  & \makecell{test}\\
+        Kernel estimator & \makecell{Flexible Easy to exploit}  & \makecell{Slow rate of convergence \\ Hard to evaluate at new data point \\ Hard to choose tuning parameters}\\
         \hline
-      \end{tabular}
-    \end{frame}
+    \end{tabular}
+\end{frame}
 
 
 
