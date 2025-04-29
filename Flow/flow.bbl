@@ -12,6 +12,10 @@ Simon Coste.
 Charlotte Dion-Blanc.
 \newblock Nonparametric density estimation, 2024.
 
+\bibitem{mathieu2024flow}
+Tor Fjelde, Emile Mathieu, and Vincent Dutordoir.
+\newblock An introduction to flow matching, January 2024.
+
 \bibitem{lipman2024flowmatchingguidecode}
 Yaron Lipman, Marton Havasi, Peter Holderrieth, Neta Shaul, Matt Le, Brian Karrer, Ricky T.~Q. Chen, David Lopez-Paz, Heli Ben-Hamu, and Itai Gat.
 \newblock Flow matching guide and code, 2024.

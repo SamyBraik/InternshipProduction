@@ -13,16 +13,16 @@
 \begin{document}
 \maketitle
 
-Two paradigm are mentioned in the following sections. The first one is generative models and the second one nonparametric density estimation. They are particularly relevant in our context because they make little to none assumptions on the shape of the data.
-Generative models are the go-to techniques to learn and sample from an unobserved probability distribution. They more or less learn the true distribution but they are mostly effective at generating new data. Density estimation focuses on the first goal. Although, I argue that we could sample according to a good density estimation.
+Two paradigms are mentioned in the following sections. The first one is generative models and the second one nonparametric density estimation. These approaches are particularly relevant in our setting because they make few, if any, assumptions on the shape of the data. \\
+On one hand, generative models are the go-to techniques to learn and sample from an unobserved probability distribution. They more or less learn the true distribution, sometimes implicitly, but they are mostly effective at generating new data. On the second hand, density estimation solely focus on the first goal, learning the distribution. Although I argue that we could sample according to a good density estimation.
 
 \section{Generative models}
-All the methods described in this section follow the same framework. They want to link an unknown distribution with density \(p\) to a simpler distribution with density written \(q\). Either directly like flow methods or up to a certain degree of precision like diffusion models.
+All the methods described in this section follow the same framework. They want to link an unknown distribution with density \(p\) to a simpler distribution with density \(q\). Either directly like flow methods or up to a certain degree of precision like diffusion models.
 \subsection{Normalizing flow}
 Let \(X_0\in\mathbb{R}^d\) distributed according to \(q\) a simple distribution, a Gaussian for example, and \(p\) a target distribution.
 \\
-Consider \(f:\mathbb{R}^d\rightarrow\mathbb{R}^d\), an invertible and differentiable function and set \(X_1:=f(X_0)\) such that \(X_1\sim p\). 
-We are able to write \(p\), in terms of \(q\), 
+Let \(f:\mathbb{R}^d\rightarrow\mathbb{R}^d\), an invertible and differentiable function and set \(X_1:=f(X_0)\) such that \(X_1\sim p\). \\
+We can write \(p\) as a function of \(q\) and \(f\) using the change of variable formula 
 \begin{align}
     p(X_1)&=q(f^{-1}(X_1))\left| \det\frac{\partial f^{-1}}{\partial X_1}(X_1) \right| = q(X_0)\left| \det \frac{\partial f}{\partial X_0}(X_0) \right|^{-1} \\
     &\implies \log p(X_1)=\log q(X_0) - \log \left|  \det \frac{\partial f}{\partial X_0}(X_0) \right|  
@@ -32,30 +32,39 @@ We are able to write \(p\), in terms of \(q\),
 %    p(x_0)=q(f(x_0))\left|  \det\frac{\partial f}{\partial x_0}(x_0) \right|
 %\end{align}
 
-Therefore the goal is to learn \(f_\theta\), approximation of \(f\), such that \(X_1 \simeq f_\theta^{-1}(X_0)\). \\
-A structure is imposed to $f_\theta$, we define $f_1\ldots f_k$ simpler function,  such that
+Therefore the goal is to learn \(f_\theta\), approximation of \(f\), such that \(X_1 \simeq f_\theta(X_0)\). \\
+A structure is imposed to $f_\theta$, we define $f_1\ldots f_k$ simple bijective and differentiable transformations,  such that
 \begin{align}
-    f_\theta = f_k\circ f_{k-1}\circ\ldots\circ f_2\circ f_1
+    f_\theta = f_K\circ f_{K-1}\circ\ldots\circ f_2\circ f_1
 \end{align}
+where each \( f_k \) is chosen such that its Jacobian determinant is easy to compute.
+
+\begin{comment}
 There is then, 
 \begin{align}
     X_0\sim p_0=q, \quad f_1(X_0) = X_1 \implies X_1\sim p_1,\quad f(X_1)=X_2 \ldots f(X_{k-1})=X_k \sim p_k = \hat{p} \simeq p
 \end{align}
-To learn \(f_\theta\), we need to minimize the following loss function
+\end{comment}
+This leads to the following chain of inverse transformations
 \begin{align}
-    \mathcal{L}_\text{NF}(\theta) = -\frac{1}{n}\sum_{i=1}^n \left[ \log q(f_\theta^{-1}(X_i)) + \sum_{k=1}^K \log \left| \det\frac{\partial f_k^{-1}}{\partial x_k}(X_i) \right| \right] 
+    Z_K = X_1,\quad Z_{K-1} = f_K^{-1}(Z_K),\quad Z_{K-2} = f_{K-1}^{-1}(Z_{K-1}),\ \dots,\ Z_0 = f_1^{-1}(Z_1),
 \end{align}
-with \(X_i\) has density \(p\). \\
+To learn \(f_\theta\), we maximize the likelihood of the data, or equivalently minimize the negative log-likelihood.
+\begin{align}
+    \mathcal{L}_\text{NF}(\theta) 
+    = -\frac{1}{n} \sum_{i=1}^n \left[ \log q(Z_0^{(i)}) + \sum_{k=1}^K \log \left| \det \left( \frac{\partial f_k^{-1}}{\partial z_{k}}(Z_k^{(i)}) \right) \right| \right],
+\end{align}
+where \( Z_0^{(i)} = f_\theta^{-1}(X_i) \), and each \( Z_k^{(i)} \) is computed recursively via the inverse transformations.
 
 %Normalizing flows requires invertibility of the mappings and an efficient way to compute the determinant of there Jacobian. Therefore, components have to be chosen carefully.
 
 \subsection{Flow}
-A $C^r$ flow is a time-dependent mapping $\phi : [0,1]\times \mathbb{R}^d\rightarrow\mathbb{R}^d$ implementing $\phi(t,x) \rightarrow \phi_t(x)$ such that for all $t\in[0,1]$, $\phi_t$ is a $C^r$ diffeomorphism in $x$.
+A $C^r$ flow is a time-dependent mapping $\phi : [0,1]\times \mathbb{R}^d\rightarrow\mathbb{R}^d$ characterized by $\phi(t,x) \rightarrow \phi_t(x)$ such that for all $t\in[0,1]$, $\phi_t$ is a $C^r$ diffeomorphism in $x$.
 We define a flow model by applying a flow $\phi_t$ to the random value $X_0$
 \begin{align}\label{flow-model}
     X_t=\phi_t(X_0), \quad t \in[0,1], X_0\sim p 
 \end{align}
-Alternatively, we can define a flow using a velocity field \(v_t:[0,1]\times\mathbb{R}^d\rightarrow \mathbb{R}^d\) implementing \(v:(t,x)\rightarrow v_t(x)\) via the following ODE 
+Alternatively, we can define a flow using a velocity field \(v_t:[0,1]\times\mathbb{R}^d\rightarrow \mathbb{R}^d\) characterized by \(v:(t,x)\rightarrow v_t(x)\) via the following ODE 
 
 \begin{align}\label{ODE}
 \left\{
@@ -68,7 +77,7 @@ Alternatively, we can define a flow using a velocity field \(v_t:[0,1]\times\mat
 
 We can derive a probability path as the marginal PDF of a flow model~\ref{flow-model} at time \(t\) by \(X_t\sim p_t\). This PDF is obtained by a push-forward formula 
 \begin{align}\label{pushforward}
-    p_t(x) = p(\phi^{-1}(x))|\det \partial_x \phi^{-1}(x)|
+    p_t(x) = p\left(\phi^{-1}(x)\right) \left|\det \partial_x \phi^{-1}(x)\right|
 \end{align} 
 %Knowing \(v_t\) allow us to generate \(p_t\).
 
@@ -93,8 +102,9 @@ CNF are trained by maximizing the log-likelyhood
 \subsection{Flow matching}
 %Combination of CNF and Diffusion models
 
-Using the notions defined in the previous section. The Flow Matching framework is as follow: 
-We have a known source distribution \(q\) and an unkown target distribution \(p\), we set a probability path \(p_t\) interpolating from \(p_0=q\) to \(p_1=p\). We learn a velocity field \(v_t^\theta\) (a neural network) generating the path \(p_t\) by solving the ODE~\ref{ODE} sample according to \(p\) (approximation). In order to learn \(v_t^\theta\) the loss to minimize is 
+Using the notions defined in the previous section, we know introduce the Flow Matching framework.
+Given a known source distribution \(q\) and an unkown target distribution \(p\), we define a probability path \(p_t\) interpolating from \(p_0=q\) to \(p_1=p\). We learn a velocity field \(v_t^\theta\) (a neural network) generating the path \(p_t\) and sample according to the learned model by solving the ODE~(\ref{ODE}). \\
+In order to learn \(v_t^\theta\), we minimize the flow matching loss
 \begin{align}
     \mathcal{L}_\text{FM}(\theta):=\mathbb{E}[\|v_t(X_t)-v_t^\theta(X_t)\|^2]= \mathbb{E}[\|v_t^\theta(X_t)-\dot{X_t}\|^2] + c
 \end{align} 
@@ -102,11 +112,11 @@ where \(c = \mathbb{E}[\|\dot{X_t}\|^2]-\mathbb{E}[\|v_t(X_t)\|^2]\) constant wi
 %There is no constraint on the neural network and the invertibility needed in~\ref{pushforward} is due to optimal transport argument.
 
 \subsection{Diffusion}
-The general framework of diffusion is divided in two phases. We start from a random variable distributed according to our target distribution \( p \), add noise until it reaches an easy-to-sample distribution \(q\) which is practically always a Gaussian. Then we denoise from \(q\) to get back to \(p\). 
+The general framework of diffusion is divided in two phases. In the forward phase (noising), we start from a random variable distributed according to our target distribution \( p \), gradually add noise until it reaches an easy-to-sample distribution \(q\) which is practically always a Gaussian. Then, in the backward phase (denoising) we reverse the process and start from \(q\) to get back to \(p\). 
 
 \bigskip
 
-We consider \(T\in\mathbb{N}^{*}\), a noise schedule \(\beta:[0,T]\rightarrow \mathbb{R}_{+}^{*}\), assumed to be continuous and non-decreasing, \(B_t\) a Brownian motion at time \(t\).
+We consider \(T\in\mathbb{N}^{*}\) a finite time horizon, a noise schedule \(\beta:[0,T]\rightarrow \mathbb{R}_{+}^{*}\), assumed to be continuous and non-decreasing, \(B_t\) a Brownian motion at time \(t\).
 
 \textbf{Forward and Backward processes}
 \begin{align}
@@ -118,7 +128,7 @@ We consider \(T\in\mathbb{N}^{*}\), a noise schedule \(\beta:[0,T]\rightarrow \m
     d\overleftarrow{X}_t=\left(  \frac{\beta(T-t)}{2\sigma^2}\overleftarrow{X}_t+\beta(T-t)\nabla\log p_{T-t}\left(\overleftarrow{X}_t \right)  \right)dt + \sqrt{\beta(T-t)}dB_t, \quad \overleftarrow{X}_0\sim p_T \quad \text{Backward process}
 \end{align}
 
-The thing is we only noise the random variable until a finite time \(T\) therefore \(p_T\not= q\) but with a good choice of \(T\) and \(\beta\), we can hope that \(p_T\simeq q\). Furthermore, the backward process allows us to retrieve p but the score \(\nabla p_t\) is unkown at each time \(t\). To adress this problem, denoising score matching is used.  
+Since we only noise the random variable until a finite time \(T\), the resulting distribution \(p_T\) is not exactly equal to the distribution \(q\), however with a good choice of \(T\) and \(\beta\), we can hope that \(p_T\simeq q\). Furthermore, the backward process allows us to retrieve p but the score \(\nabla p_t\) is unkown at each time \(t\). To adress this problem, denoising score matching is used.  
 
 \bigskip
 \textbf{Denoising Score Matching} \newline
@@ -130,11 +140,11 @@ Let \(s:\mathbb{R}^d\rightarrow\mathbb{R}^d\). \(X\) a random variable with dens
 \end{align}
 with \(c\) a constant not related to \(s\).
 
-With a good architecural choice of the neural network \(s_\theta\) (data dependent) and noise schedule, we can generate new data by using the backward process.
+With a good architecural choice of the neural network \(s_\theta\) (data dependent) and noise schedule, we can use the loss to learn the score function and generate new samples from the target distribution using the bakward SDE.
 
 
 \section{Nonparametric density estimation}
-The second approach that could be useful in our situation is nonparametric density estimation. Consider a dataset \((X_1,\ldots,X_n)\) i.i.d. with density \(f\). The goal, like the name suggests, is to estimate \(f\). 
+The second approach that could be useful in our situation is nonparametric density estimation. Given an i.i.d. dataset \((X_1,\ldots,X_n)\) drawn from a distribution with density \(f\). The goal, like the name suggests, is to estimate \(f\) without assuming a specific parametric form. The two most common methods are kernel density estimation and projection estimator. 
 
 \subsection{Kernel estimator}
 Consider a kernel function \(K\) which is a symmetric density, \(H\) a \(d\times d\) symmetric and positive definite matrix, \(x\in\mathbb{R}^d\), the kernel estimator is defined by 
@@ -143,15 +153,22 @@ Consider a kernel function \(K\) which is a symmetric density, \(H\) a \(d\times
 \end{align}
 with \(K_\mathrm{H}(x):= |\mathrm{H}|^{-1/2}K(\mathrm{H}^{-1/2}x)\). \\
 A widely used kernel is the Gaussian kernel : \(K_\textrm{H}(x)=(2\pi)^{-d/2}|\textrm{H}|^{-1/2}e^{-\frac{1}{2} x^\intercal \textrm{H}^{-1} x}\) \\
-The choice of \(\mathrm{H}\) is critical since it governs the bias-variance tradeoff. To choose the optimal \(\mathrm{H}\) few methods could be used like Cross validation or Goldenschlugger-Lepski.
+The choice of \(\mathrm{H}\) is critical since it governs the bias-variance tradeoff and the convergence rate of the estimator. To choose the optimal \(\mathrm{H}\) few methods could be used like Cross validation or Goldenschlugger-Lepski.
 
 \subsection{Projection estimator}
-To build this estimator, we add another assumption which is \(f\in L_2(A), A\subset \mathbb{R}^d\). \\
-Let \((\phi_j)_{j\le 1}\) an Hilbert basis of \(L_2(A)\) (Fourier, Legendre, wavelets), the estimator is defined by 
+This method assumes that \(f\in L_2(A), \, A\subset \mathbb{R}^d\). \\
+Let \((\varphi_j)_{j\le 1}\) be a Hilbert basis of \(L_2(A)\) such as Fourier, Legendre or wavelets basis. The projection estimator is defined by 
+
+\begin{align}
+    \hat{f}_m(x)=\sum_{\|j\|\le m} \hat{a}_j\varphi_j(x), \quad \hat{a}_j=\frac{1}{n}\sum_{i=1}^n \varphi_j(X_i)
+\end{align}
+
+\begin{comment}
 \begin{align}
     \hat{f}_\mathrm{K}=\sum_{k_1=1}^{K_1}\ldots\sum_{k_d=1}^{K_d}\hat{a}_{k_1,\ldots,k_d}\varphi_{k_1,\ldots,k_d}, \quad \hat{a}_{k_1,\ldots,k_d}=\frac{1}{n}\sum_{i=1}^n \varphi_{k_1,\ldots,k_d}(X_i) = \frac{1}{n}\sum_{i=1}^n \prod_{j=1}^d \varphi_{k_j}(X_i)
 \end{align}
-Just like the previous case, the choice of the vector \(\mathrm{K}=(K_1,\ldots,K_d)\) is crucial, and methods like cross validation and penalization help choosing the best model.
+\end{comment}
+Just like the previous case, the choice of \(m\) is crucial, and methods like cross validation and penalization help choosing the best model.
 
 \bigskip
 %One of the drawbacks of those two methods is they work well when the number of observations \(n\) is big.
@@ -162,6 +179,7 @@ Just like the previous case, the choice of the vector \(\mathrm{K}=(K_1,\ldots,K
 \nocite{strasman2025analysisnoiseschedulescorebased}
 \nocite{battey2014smoothprojecteddensityestimation}
 \nocite{dionblanc2025nonparametricdensityestimation}
+\nocite{mathieu2024flow}
 \bibliographystyle{plain}
 \bibliography{references}
 \end{document}
