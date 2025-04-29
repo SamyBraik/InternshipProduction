@@ -1,8 +1,16 @@
 \begin{thebibliography}{1}
 
+\bibitem{battey2014smoothprojecteddensityestimation}
+Heather Battey and Han Liu.
+\newblock Smooth projected density estimation, 2014.
+
 \bibitem{Coste_2025}
 Simon Coste.
 \newblock Flow models ii: Score matching techniques, Mar 2025.
+
+\bibitem{dionblanc2025nonparametricdensityestimation}
+Charlotte Dion-Blanc.
+\newblock Nonparametric density estimation, 2024.
 
 \bibitem{lipman2024flowmatchingguidecode}
 Yaron Lipman, Marton Havasi, Peter Holderrieth, Neta Shaul, Matt Le, Brian Karrer, Ricky T.~Q. Chen, David Lopez-Paz, Heli Ben-Hamu, and Itai Gat.

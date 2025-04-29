@@ -17,7 +17,7 @@ Two paradigm are mentioned in the following sections. The first one is generativ
 Generative models are the go-to techniques to learn and sample from an unobserved probability distribution. They more or less learn the true distribution but they are mostly effective at generating new data. Density estimation focuses on the first goal. Although, I argue that we could sample according to a good density estimation.
 
 \section{Generative models}
-All the methods described in this section follow the same framework. They want to link an unknown distribution with density \(p\) to a simpler distribution with density written \(q\). Either directly like the flow methods or up to a certain degree of precision like diffusion models.
+All the methods described in this section follow the same framework. They want to link an unknown distribution with density \(p\) to a simpler distribution with density written \(q\). Either directly like flow methods or up to a certain degree of precision like diffusion models.
 \subsection{Normalizing flow}
 Let \(X_0\in\mathbb{R}^d\) distributed according to \(q\) a simple distribution, a Gaussian for example, and \(p\) a target distribution.
 \\
@@ -32,20 +32,20 @@ We are able to write \(p\), in terms of \(q\),
 %    p(x_0)=q(f(x_0))\left|  \det\frac{\partial f}{\partial x_0}(x_0) \right|
 %\end{align}
 
-Therefore the goal is to learn \(f_\theta\), approximation of \(f\), such that \(x_1 \simeq f_\theta^{-1}(x_0)\). \\
+Therefore the goal is to learn \(f_\theta\), approximation of \(f\), such that \(X_1 \simeq f_\theta^{-1}(X_0)\). \\
 A structure is imposed to $f_\theta$, we define $f_1\ldots f_k$ simpler function,  such that
 \begin{align}
     f_\theta = f_k\circ f_{k-1}\circ\ldots\circ f_2\circ f_1
 \end{align}
 There is then, 
 \begin{align}
-    x_0\sim p_0=q, \quad f_1(x_0) = x_1 \implies x_1\sim p_1,\quad f(x_1)=x_2 \ldots f(x_{k-1})=x_k \sim p_k = \hat{p} \simeq p
+    X_0\sim p_0=q, \quad f_1(X_0) = X_1 \implies X_1\sim p_1,\quad f(X_1)=X_2 \ldots f(X_{k-1})=X_k \sim p_k = \hat{p} \simeq p
 \end{align}
 To learn \(f_\theta\), we need to minimize the following loss function
 \begin{align}
-    \mathcal{L}_\text{NF}(\theta) = -\sum_{i=1}^N \left[ \log q(f_\theta^{-1}(x^i)) + \sum_{k=1}^K \log \left| \det\frac{\partial f_k^{-1}}{\partial x_k}(x^i) \right| \right] 
+    \mathcal{L}_\text{NF}(\theta) = -\frac{1}{n}\sum_{i=1}^n \left[ \log q(f_\theta^{-1}(X_i)) + \sum_{k=1}^K \log \left| \det\frac{\partial f_k^{-1}}{\partial x_k}(X_i) \right| \right] 
 \end{align}
-where \(x^i\) are the samples from \(q\). \\
+with \(X_i\) has density \(p\). \\
 
 %Normalizing flows requires invertibility of the mappings and an efficient way to compute the determinant of there Jacobian. Therefore, components have to be chosen carefully.
 
@@ -58,8 +58,12 @@ We define a flow model by applying a flow $\phi_t$ to the random value $X_0$
 Alternatively, we can define a flow using a velocity field \(v_t:[0,1]\times\mathbb{R}^d\rightarrow \mathbb{R}^d\) implementing \(v:(t,x)\rightarrow v_t(x)\) via the following ODE 
 
 \begin{align}\label{ODE}
-    \partial_t \phi_t(x)&=v_t(\phi_t(x))\\
-    \phi_0(x)&=x \quad \text{initial condition}
+\left\{
+    \begin{array}{ll}
+        \partial_t \phi_t(x)&=v_t(\phi_t(x))\\
+        \phi_0(x)&=x 
+    \end{array}
+\right.
 \end{align}
 
 We can derive a probability path as the marginal PDF of a flow model~\ref{flow-model} at time \(t\) by \(X_t\sim p_t\). This PDF is obtained by a push-forward formula 
@@ -95,7 +99,7 @@ We have a known source distribution \(q\) and an unkown target distribution \(p\
     \mathcal{L}_\text{FM}(\theta):=\mathbb{E}[\|v_t(X_t)-v_t^\theta(X_t)\|^2]= \mathbb{E}[\|v_t^\theta(X_t)-\dot{X_t}\|^2] + c
 \end{align} 
 where \(c = \mathbb{E}[\|\dot{X_t}\|^2]-\mathbb{E}[\|v_t(X_t)\|^2]\) constant with respect to \(\theta\). \\
-There is no constraint on the neural network and the invertibility needed in~\ref{pushforward} is due to optimal transport argument.
+%There is no constraint on the neural network and the invertibility needed in~\ref{pushforward} is due to optimal transport argument.
 
 \subsection{Diffusion}
 The general framework of diffusion is divided in two phases. We start from a random variable distributed according to our target distribution \( p \), add noise until it reaches an easy-to-sample distribution \(q\) which is practically always a Gaussian. Then we denoise from \(q\) to get back to \(p\). 
@@ -126,36 +130,38 @@ Let \(s:\mathbb{R}^d\rightarrow\mathbb{R}^d\). \(X\) a random variable with dens
 \end{align}
 with \(c\) a constant not related to \(s\).
 
-With a good architecural choice of the neural network \(s_\theta\) (data dependent) and noise schedule, we can generate using the backward process.
+With a good architecural choice of the neural network \(s_\theta\) (data dependent) and noise schedule, we can generate new data by using the backward process.
 
 
 \section{Nonparametric density estimation}
-Another approach that could be useful in our situation is density estimation. Consider a dataset \((X_1,\ldots,X_n)\) all having the same density \(f\). The goal is to estimate \(f\). 
+The second approach that could be useful in our situation is nonparametric density estimation. Consider a dataset \((X_1,\ldots,X_n)\) i.i.d. with density \(f\). The goal, like the name suggests, is to estimate \(f\). 
 
 \subsection{Kernel estimator}
-Consider a kernel function \(K\) which is a symmetric density, the kernel estimator is defined, with \(H\) a \(d\times d\) symmetric and positive definite matrix, \(x\in\mathbb{R}^d\), by 
+Consider a kernel function \(K\) which is a symmetric density, \(H\) a \(d\times d\) symmetric and positive definite matrix, \(x\in\mathbb{R}^d\), the kernel estimator is defined by 
 \begin{align}
 \hat{f}_H(x):=\frac{1}{n|\mathrm{H}|^{1/2}}\sum_{j=1}^n K\left(\mathrm{H}^{-1/2}(x-X_j)\right)=\frac{1}{n}K_\mathrm{H}\left(x-X_j\right)
 \end{align}
 with \(K_\mathrm{H}(x):= |\mathrm{H}|^{-1/2}K(\mathrm{H}^{-1/2}x)\). \\
-A very used kernel is the Gaussian kernel : \(K_\textrm{H}(x)=(2\pi)^{-d/2}|\textrm{H}|^{-1/2}e^{-\frac{1}{2} x^\intercal \textrm{H}^{-1} x}\) \\
-The choice of \(h\) is critical since it governs the bias-variance tradeoff. To choose the optimal \(h\) few methods could be used like Cross validation or Goldenschlugger-Lepski.
+A widely used kernel is the Gaussian kernel : \(K_\textrm{H}(x)=(2\pi)^{-d/2}|\textrm{H}|^{-1/2}e^{-\frac{1}{2} x^\intercal \textrm{H}^{-1} x}\) \\
+The choice of \(\mathrm{H}\) is critical since it governs the bias-variance tradeoff. To choose the optimal \(\mathrm{H}\) few methods could be used like Cross validation or Goldenschlugger-Lepski.
 
 \subsection{Projection estimator}
-To build this estimator, we add another assumption which is \(f\in L_2(A), A\subset \mathbb{R}\). \\
-Let \((\phi_j)_{j\le 1}\) an Hilbert basis of \(L_2(A)\), the estimator is defined by 
+To build this estimator, we add another assumption which is \(f\in L_2(A), A\subset \mathbb{R}^d\). \\
+Let \((\phi_j)_{j\le 1}\) an Hilbert basis of \(L_2(A)\) (Fourier, Legendre, wavelets), the estimator is defined by 
 \begin{align}
-    \hat{f}_m=\sum_{i=1}^m\hat{a}_j\varphi_j, \quad \hat{a}_j=\frac{1}{n}\sum_{i=1}^n \varphi_j(X_i)
+    \hat{f}_\mathrm{K}=\sum_{k_1=1}^{K_1}\ldots\sum_{k_d=1}^{K_d}\hat{a}_{k_1,\ldots,k_d}\varphi_{k_1,\ldots,k_d}, \quad \hat{a}_{k_1,\ldots,k_d}=\frac{1}{n}\sum_{i=1}^n \varphi_{k_1,\ldots,k_d}(X_i) = \frac{1}{n}\sum_{i=1}^n \prod_{j=1}^d \varphi_{k_j}(X_i)
 \end{align}
-Just like the previous case, the choice of the value \(m\) is crucial, and methods like cross validation and penalization help choosing the best model.
+Just like the previous case, the choice of the vector \(\mathrm{K}=(K_1,\ldots,K_d)\) is crucial, and methods like cross validation and penalization help choosing the best model.
 
 \bigskip
-Nonparametric estimation can be interesting when the number of observations \(n\) is big.
+%One of the drawbacks of those two methods is they work well when the number of observations \(n\) is big.
 
 \newpage
 \nocite{Coste_2025}
 \nocite{lipman2024flowmatchingguidecode}
 \nocite{strasman2025analysisnoiseschedulescorebased}
+\nocite{battey2014smoothprojecteddensityestimation}
+\nocite{dionblanc2025nonparametricdensityestimation}
 \bibliographystyle{plain}
 \bibliography{references}
 \end{document}
