@@ -81,6 +81,18 @@ The link between the flow and the probability path is given by the change of var
 \begin{align}
     p_t(x)=q(\phi_t^{-1}(x))\det \left[\frac{\partial\phi_t^{-1}}{\partial x}(x)\right]
 \end{align}
+This coincides with the normalizing framework.
+
+\bigskip
+
+Given a target probability path \(p_t\) and a corresponding \(v_t\) vector field, the naïve flow matching loss is 
+
+\begin{align}
+    \mathcal{L}_\text{FM}(\theta) = \mathbb{E}_{t,p_t(x)}[\|v_t^\theta(x)-v_t(x)\|^2]
+\end{align}
+
+But we don't have acces to \(v_t\) and \(p_t\). To adress this problem and given a particular data sample \(x_1\), we introduce conditional probability path \(p_t(x|x_1)\) such that \(p_0(x|x_1)=q(x)\) at time \(t=0\) and designed  
+
 
 \bibliographystyle{plain}
 \bibliography{references}
