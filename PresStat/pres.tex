@@ -46,6 +46,19 @@
     Plug it in the backward process and generate by discretizing the dynamics.
 \end{frame}
 
+\begin{frame}
+    Let \(X_0\sim q\) and \(f:\mathbb{R}^d\rightarrow\mathbb{R}^d\) an invertible and differentiable function an set  \(X_1:=f(X_0)\) such that \(X_1\sim p\).\\
+    We can write the density of \(X_1\) as
+    \begin{align}
+        p_{X_1} &= p_{X_0}(f^{-1}(x_1))\left| \det \frac{\partial f^{-1}}{\partial x_1}(x_1)\right|\\
+        &= p_{X_0}(f^{-1}(x_1))\left| \det \frac{\partial f}{\partial x_0}(f^{-1}(x_1))\right|^{-1} 
+    \end{align}
+    We can then write the log-likelihood as
+    \begin{align}
+        \log p_{X_1}(x_1) &= \log p_{X_0}(f^{-1}(x_1))-\log \left| \det \frac{\partial f}{\partial x_0}(f^{-1}(x_1))\right|
+    \end{align}
+\end{frame}
+
 \begin{frame}{Normalizing flow}
     Let \(X_0\sim q\) and \(X_1\sim p\). We want to learn \(f_\theta\) such that \(X_1 \simeq f_\theta(X_0)=Z\sim p_Z\). To do that, we set a structure on \(f_\theta\), with \(f_1,\ldots,f_k\) simpler function (all parametrized by \(\theta\)) such that 
     \[f_\theta=f_1\circ f_2\circ\ldots\circ f_k\] 
@@ -71,7 +84,12 @@
 \end{frame}
 
 \begin{frame}{Flow matching}
-    
+        The framework is as follow : \\
+        We define a probability path \(p_t\) interpolating from \(p_0=q\) to \(p_1=1\). Then we learn a velocity field \(v_t^\theta\) generating the path \(p_t\) by minimizing the flow matching loss
+        \begin{align}
+            \mathcal{L}_\text{FM}(\theta):=\mathbb{E}[\|v_t^\theta(X_t)-\dot{X}_t \|^2]+c
+        \end{align}
+    Finally, we can sample from \(p_1\) by solving the ODE \eqref{ODE} with the learned velocity field \(v_t^\theta\) and the initial condition \(X_0\sim q\).
 \end{frame}
 
 
