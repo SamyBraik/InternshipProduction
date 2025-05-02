@@ -23,6 +23,7 @@
 
 \maketitle
 
+\section{Notations}
 We start by defining a probability density path \(p:[0,1]\times\mathbb{R}^d\rightarrow\mathbb{R}^d\) meaning that for each time \(t\), \(p_t\) is density function i.e. \(\int p_t(x)dx=1\).\\
 A simple example of such a path is a path \(p\) interpolating two density \(p_0\) and \(p_1\) with \(p_t=tp_1+(1-t)p_0\)
 
@@ -81,17 +82,38 @@ The link between the flow and the probability path is given by the change of var
 \begin{align}
     p_t(x)=q(\phi_t^{-1}(x))\det \left[\frac{\partial\phi_t^{-1}}{\partial x}(x)\right]
 \end{align}
-This coincides with the normalizing framework.
-
+This coincides with the normalizing framework. \\
+The link between the vector field and the probability path is given by the continuity equation 
+\begin{align}
+  \frac{d}{dt}p_t(x)+\text{div}(p_t(x)v_t(x))=0
+\end{align}
+It said that the vector field \(v_t\) generates the probability path \(p_t\) if the continuity equation holds.\\
 \bigskip
 
+\section{Objective}
 Given a target probability path \(p_t\) and a corresponding \(v_t\) vector field, the naïve flow matching loss is 
 
 \begin{align}
-    \mathcal{L}_\text{FM}(\theta) = \mathbb{E}_{t,p_t(x)}[\|v_t^\theta(x)-v_t(x)\|^2]
+    \mathcal{L}_\text{FM}(\theta) = \mathbb{E}_{t,p_t(x)}\left[\|v_t^\theta(x)-v_t(x)\|^2\right]
 \end{align}
 
-But we don't have acces to \(v_t\) and \(p_t\). To adress this problem and given a particular data sample \(x_1\), we introduce conditional probability path \(p_t(x|x_1)\) such that \(p_0(x|x_1)=q(x)\) at time \(t=0\) and designed  
+But we don't have acces to \(v_t\) and \(p_t\). To adress this problem and given a particular data sample \(x_1\), we introduce conditional probability path \(p_t(x|x_1)\) such that \(p_0(x|x_1)=q(x)\) at time \(t=0\) and by marginalizing over \(x_1\) we can recover the marginal probability path  
+\begin{align}
+  p_t(x)=\int p_t(x|x_1)q(x_1)dx_1
+\end{align}
+in the same vein, we can define a conditional vector field, assuming \(p_t(x)\) for all \(t\) and \(x\) 
+\begin{align}
+  v_t(x)=\int v_t(x|x_1)\frac{p_t(x|x_1)q(x_1)}{p_t(x)}dx_1
+\end{align}
+
+Then the author introduces a new loss function called the conditional flow matching loss
+\begin{align}
+  \mathcal{L}_\text{CFM}(\theta) = \mathbb{E}_{t,q(x_1),p_t(x|x_1)}\left[\|v_t^\theta(x|x_1)-v_t(x|x_1)\|^2\right]
+\end{align}
+with a strong property : \(\mathcal{L}_\text{FM}(\theta)=\mathcal{L}_\text{CFM}(\theta)\) up to a constant independent of \(\theta\). \\
+So the focus is now on designing a conditional probability path and vector field and it turns out "the conditional flow matching objective works with any choice of conditional probability path and conditional vector fields". Futhermore, there is an infinite number of vector fields that generate any particular probability path.\\
+
+\section{Example}
 
 
 \bibliographystyle{plain}
