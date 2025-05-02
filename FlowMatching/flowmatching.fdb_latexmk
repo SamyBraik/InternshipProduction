@@ -1,15 +1,15 @@
 # Fdb version 4
-["bibtex flowmatching"] 0 "flowmatching.aux" "flowmatching.bbl" "flowmatching" 1746178184.28184 0
+["bibtex flowmatching"] 1746189126.97476 "flowmatching.aux" "flowmatching.bbl" "flowmatching" 1746192026.81512 0
+  "./references.bib" 1746187351.58542 420 1de8a8b459dff5a25e900ef09bc2a98c ""
   "/usr/share/texlive/texmf-dist/bibtex/bst/base/plain.bst" 1292289607 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "flowmatching.aux" 0 -1 0 "pdflatex"
-  "references.bib" 0 -1 0 ""
+  "flowmatching.aux" 1746192026.42743 2001 17f9dd177b721a052e35ab62d81b3cc1 "pdflatex"
   (generated)
   "flowmatching.bbl"
   "flowmatching.blg"
   (rewritten before read)
-["pdflatex"] 1746178183.18731 "/home/admin-sbraik/Documents/InternshipProduction/FlowMatching/flowmatching.tex" "flowmatching.pdf" "flowmatching" 1746178184.28206 0
+["pdflatex"] 1746192025.54251 "/home/admin-sbraik/Documents/InternshipProduction/FlowMatching/flowmatching.tex" "flowmatching.pdf" "flowmatching" 1746192026.81537 0
   "/etc/texmf/web2c/texmf.cnf" 1739282644.56801 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/admin-sbraik/Documents/InternshipProduction/FlowMatching/flowmatching.tex" 1746178181.80997 4636 871dcde4642423644ce6210104b6e373 ""
+  "/home/admin-sbraik/Documents/InternshipProduction/FlowMatching/flowmatching.tex" 1746192025.32141 5292 10168ca143924e25899111be835c9e5c ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecbx1728.tfm" 1136768653 3584 ad49a18d8515beef6d92d4d3f197d0fd ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecrm0600.tfm" 1136768653 3584 291a5713401683441e0a8c8f4417b17b ""
@@ -123,10 +123,12 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1739282669.20627 5472669 54eaf61a88b6b7896ebd0dac973cb29c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1739282708 8214595 ed65355c00b419648efb22af8651136f ""
-  "flowmatching.aux" 1746178183.944 1065 b1ea373fcd766631c06b9a38391e753d "pdflatex"
-  "flowmatching.bbl" 0 -1 0 "bibtex flowmatching"
-  "flowmatching.out" 1746178183.945 254 8c7f92248d604c4dead505197b2ccbcb "pdflatex"
-  "flowmatching.tex" 1746178181.80997 4636 871dcde4642423644ce6210104b6e373 ""
+  "FlowMatchingBasics.png" 1746189052.97555 22346 634543aee7c08aacd65c7b3164f7263f ""
+  "FlowMatchingFramework.png" 1746187189.18865 70826 fe283b5c074123d840167853724bb8ed ""
+  "flowmatching.aux" 1746192026.42743 2001 17f9dd177b721a052e35ab62d81b3cc1 "pdflatex"
+  "flowmatching.bbl" 1746189127.10137 286 8d7c58e36b052b74a1b9c63a8c626f46 "bibtex flowmatching"
+  "flowmatching.out" 1746192026.42843 254 8c7f92248d604c4dead505197b2ccbcb "pdflatex"
+  "flowmatching.tex" 1746192025.32141 5292 10168ca143924e25899111be835c9e5c ""
   "frames/frame_1.png" 1746019911.40271 21878 ffd56eafba078e5a731c50c255dc9120 ""
   "frames/frame_2.png" 1746019911.51971 21994 414191052fcdecffe815361f7f1a08f1 ""
   "frames/frame_3.png" 1746019911.63471 21285 4361bea135d1e7d5631026253323563b ""

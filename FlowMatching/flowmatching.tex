@@ -89,6 +89,12 @@ The link between the vector field and the probability path is given by the conti
 \end{align}
 It said that the vector field \(v_t\) generates the probability path \(p_t\) if the continuity equation holds.\\
 \bigskip
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{FlowMatchingBasics.png}
+    \caption{How the notions are linked together, from \cite{lipman2024flowmatchingguidecode}}
+    \label{fig:flow_matching_basics}
+\end{figure}
 
 \section{Objective}
 Given a target probability path \(p_t\) and a corresponding \(v_t\) vector field, the naïve flow matching loss is 
@@ -101,10 +107,18 @@ But we don't have acces to \(v_t\) and \(p_t\). To adress this problem and given
 \begin{align}
   p_t(x)=\int p_t(x|x_1)q(x_1)dx_1
 \end{align}
-in the same vein, we can define a conditional vector field, assuming \(p_t(x)\) for all \(t\) and \(x\) 
+So instead of defining a path between two entire distributions, we take a samples from our distributions and we just define how to go from one to the other.\\ 
+In the same vein, we can define a conditional vector field, assuming \(p_t(x)\) for all \(t\) and \(x\) 
 \begin{align}
   v_t(x)=\int v_t(x|x_1)\frac{p_t(x|x_1)q(x_1)}{p_t(x)}dx_1
 \end{align}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.8\textwidth]{FlowMatchingFramework.png}
+  \caption{A visual in \cite{lipman2024flowmatchingguidecode} that illustates well the full framework}
+  \label{fig:flow_matching_framework}
+\end{figure}
 
 Then the author introduces a new loss function called the conditional flow matching loss
 \begin{align}
@@ -112,6 +126,8 @@ Then the author introduces a new loss function called the conditional flow match
 \end{align}
 with a strong property : \(\mathcal{L}_\text{FM}(\theta)=\mathcal{L}_\text{CFM}(\theta)\) up to a constant independent of \(\theta\). \\
 So the focus is now on designing a conditional probability path and vector field and it turns out "the conditional flow matching objective works with any choice of conditional probability path and conditional vector fields". Futhermore, there is an infinite number of vector fields that generate any particular probability path.\\
+
+
 
 \section{Example}
 
