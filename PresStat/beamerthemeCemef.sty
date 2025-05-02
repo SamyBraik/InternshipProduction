@@ -1,0 +1,182 @@
+\mode<presentation>
+
+\usepackage[export]{adjustbox}
+
+
+\usepackage{color}
+\definecolor{BlueLogo}{RGB}{27, 187, 233}
+\definecolor{BlackLogo}{RGB}{58, 72, 83}
+
+\definecolor{LightBlue}{RGB}{0, 167, 227}
+\definecolor{Blue}{RGB}{0, 94, 168}
+\definecolor{HardBlue}{RGB}{20, 37, 95}
+\definecolor{Orange}{RGB}{238, 127, 0}
+\definecolor{Red}{RGB}{204, 7, 30}
+\definecolor{Purple}{RGB}{147, 16, 126}
+\definecolor{Yellow}{RGB}{250, 187, 0}
+\definecolor{LightGreen}{RGB}{165, 196, 0}
+\definecolor{Green}{RGB}{0, 153, 51}
+
+\definecolor{HeadlineColor}{RGB}{221, 232, 232}
+\definecolor{HeadIllustrationColor}{RGB}{132, 140, 146}
+
+\definecolor{Black}{RGB}{0, 0, 0}
+\definecolor{LightGray}{RGB}{139, 139, 139}
+
+
+\setbeamercolor{frametitle}{fg = Orange, bg=HeadlineColor}
+\setbeamercolor{title}{fg = HardBlue}
+\setbeamercolor{subtitle}{fg = Blue}
+\setbeamercolor{title page}{fg = HardBlue}
+
+\setbeamercolor{normal text}{fg=black,bg=white}
+
+
+\setbeamercolor{item}{fg = Blue}
+\setbeamercolor{subitem}{fg = Blue}
+\setbeamercolor{subsubitem}{fg = Blue}
+
+\setbeamercolor{caption}{fg = Black}
+\setbeamercolor{caption name}{fg = Black}
+
+\usepackage{etoolbox}
+\setbeamercolor{alerted text}{fg=Red}
+\AtBeginEnvironment{alertblock}{
+\setbeamercolor{itemize item}{fg=Red}
+\setbeamercolor{itemize subitem}{fg=Red}
+\setbeamercolor{enumerate item}{fg=Red}
+\setbeamercolor{enumerate subitem}{fg=Red}
+}
+
+\setbeamercolor{example text}{fg=Green!50!black}
+\AtBeginEnvironment{exampleblock}{
+\setbeamercolor{itemize item}{fg=Green}
+\setbeamercolor{itemize subitem}{fg=Green}
+\setbeamercolor{enumerate item}{fg=Red}
+\setbeamercolor{enumerate subitem}{fg=Red}
+}
+
+\setbeamercolor{block title}{fg = Blue}
+
+\setbeamercolor{block title alerted}{fg = Red}
+
+\setbeamercolor{block title example}{fg = Green}
+
+
+
+
+\usefonttheme{professionalfonts}
+\setbeamerfont{title}{size = \Large}
+\setbeamerfont{frametitle}{size = \Large}
+
+
+
+
+\setbeamertemplate{itemize items}[triangle]
+
+\setbeamertemplate{enumerate items}[default]
+
+\setbeamertemplate{navigation symbols}{}
+
+
+\usepackage{ragged2e}
+\usepackage{etoolbox}
+\pgfdeclareimage[height=\paperheight]{mybackground}{images/MinesParisTech_title_page.png}
+\setbeamertemplate{title page}
+{
+  \setbeamertemplate{footline}{}
+  \begin{picture}(0,0)
+    \put(-30,-163.5){%
+      \pgfuseimage{mybackground}
+    }
+    \put(60,-100){%
+      \begin{minipage}[b][.3\paperheight][t]{.7\paperwidth}
+        \begin{flushright}
+          \usebeamerfont{title}\usebeamercolor[fg]{title} \inserttitle\strut\par
+          
+          
+          \usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle} \insertsubtitle\strut\par
+            
+          
+          \usebeamerfont{author}\usebeamercolor[fg]{author} \insertauthor\strut\par
+         
+        \end{flushright}
+      \end{minipage}
+    }
+  \end{picture}
+}
+
+
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{ragged2e}
+\setbeamertemplate{frametitle}
+{
+  \nointerlineskip%
+  \begin{beamercolorbox}[sep=0.3cm,wd=\paperwidth,left]{frametitle}
+    \usebeamerfont{frametitle}%
+    \vbox{}\vskip-2ex 
+    \strut\insertframetitle\strut\par%
+    {%
+      {\usebeamerfont{framesubtitle}\usebeamercolor[fg]{framesubtitle}\insertframesubtitle\strut\par}%
+    }%
+    \vskip-1ex%
+  \end{beamercolorbox}%
+  
+}
+
+\addtobeamertemplate{frametitle}{}{%
+
+}
+
+
+\usepackage{graphicx}
+\usepackage{etoolbox}
+\usepackage{tikz}
+\newcommand{\bigcolorlinewidth}{0.02}
+
+\setbeamertemplate{footline}
+{
+  \hbox{%
+    \ifnumcomp{\insertframenumber}{=}{1}{}{%
+      \begin{tikzpicture}
+        \draw[fill, Blue]  (0               , 0) rectangle (0.111\paperwidth, \bigcolorlinewidth);
+        \draw[fill, Blue]      (0.111\paperwidth, 0) rectangle (     \paperwidth, \bigcolorlinewidth);
+
+      \end{tikzpicture}
+    }
+  }
+  \vspace{0.1cm}
+  \hbox{%
+    \ifnumcomp{\insertframenumber}{=}{1}%
+    {
+      \begin{beamercolorbox}[wd=0.3\paperwidth,ht=2.7ex,dp=1.5ex,right,rightskip=.05\paperwidth]{head/foot}
+      \end{beamercolorbox}
+      \hbox{%
+        \begin{beamercolorbox}[wd=0.1\paperwidth,ht=2.7ex,dp=1.5ex,right,rightskip=0.02\paperwidth]{head/foot}
+
+          \vspace{.3mm}
+        \end{beamercolorbox}
+        \begin{beamercolorbox}[wd=0.6\paperwidth,ht=2.7ex,dp=1.5ex,right,rightskip=.03\paperwidth]{head/foot}
+          \textcolor{HardBlue}{\large www.cemef.mines-paristech.fr}
+        \end{beamercolorbox}
+      }
+    }%
+    {% 
+      \begin{beamercolorbox}[wd=0.15\paperwidth,ht=2.7ex,dp=1.5ex,left,leftskip=.02\paperwidth]{title in head/foot}%
+        \includegraphics[width=.13\paperwidth]{images/LogoMPT-PSL.png}%
+      \end{beamercolorbox}
+      \begin{beamercolorbox}[wd=0.7\paperwidth,ht=2.7ex,dp=1.5ex,center]{author in head/foot}%
+        \usebeamerfont{title in head/foot}\insertshorttitle%
+        \vspace{0.2mm}
+      \end{beamercolorbox}
+      \begin{beamercolorbox}[wd=0.15\paperwidth,ht=2.7ex,dp=1.5ex,right,rightskip=.05\paperwidth]{author in head/foot}
+        \usebeamerfont{author in head/foot}\textcolor{LightGray}{\insertframenumber{}/\inserttotalframenumber}
+        \vspace{0.2mm}
+      \end{beamercolorbox}
+    }
+  }%
+  \vskip0pt%
+}
+
+\mode<all>

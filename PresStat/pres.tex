@@ -1,10 +1,18 @@
 \documentclass{beamer}
+\usetheme{Cemef}
+
 
 \usetheme{default} % You can change the theme as needed
 \usepackage{array}
 \usepackage{makecell}
+\usepackage{subcaption}
+\usepackage{parskip}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
 
-\title{Presentation Title}
+\title{Statistical Methods}
 \author{Samy Braik}
 \date{\today}
 
@@ -67,21 +75,62 @@
 \end{frame}
 
 \begin{frame}{Flow}
-    A flow is time dependant function \(\phi_t:[0,1]\times\mathbb{R}^d\rightarrow\mathbb{R}^d\). Using that we can define a flow model by applying a flow to  \((X_0,X_1)\)
-    \begin{align}
-        X_t &= \phi_t(X_0,X_1) \quad t\in[0,1],X_0\sim p, X_1\sim q 
-    \end{align}
-    Alternatively, by introducing a velocity field \(v_t:[0,1]\times\mathbb{R}^d\rightarrow\mathbb{R}^d\) the flow can be defined with the following ODE
-    \begin{align}\label{ODE}
-        \left\{
-            \begin{array}{ll}
-                \partial_t \phi_t(x)&=v_t(\phi_t(x))\\
-                \phi_0(x)&=x 
-            \end{array}
-        \right.
-    \end{align}
-        
+    We start by defining a probability density path
+    \begin{block}{Probability density path}
+        A probability path \(p:[0,1]\times\mathbb{R}^d\rightarrow\mathbb{R}^d\) meaning that for each time \(t\), \(p_t\) is density function i.e. \(\int p_t(x)dx=1\).\\
+    \end{block}
+    A simple example of such a path is a path \(p\) interpolating two density \(p_0\) and \(p_1\) with \(p_t=tp_1+(1-t)p_0\)
+    \begin{figure}[htbp]
+        \centering
+        \caption{A probability path interpolating $\mathcal{N}(0,0.2)$ and $\mathcal{U}([0,1])$}
+    \end{figure}
 \end{frame}
+
+
+\begin{frame}
+    \begin{figure}[h]
+        \centering
+        \begin{subfigure}[b]{0.8\textwidth}
+          \includegraphics[width=\linewidth]{/home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_1.png}
+        \end{subfigure}
+        \par\medskip
+        \begin{subfigure}[b]{0.8\textwidth}
+          \includegraphics[width=\linewidth]{/home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_2.png}
+        \end{subfigure}
+    \end{figure}
+
+\end{frame}
+
+\begin{frame}
+    \begin{figure}[htbp]
+        \centering
+        \begin{subfigure}[b]{0.8\textwidth}
+          \includegraphics[width=\linewidth]{/home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_3.png}
+        \end{subfigure}
+        \par\medskip
+        \begin{subfigure}[b]{0.8\textwidth}
+          \includegraphics[width=\linewidth]{/home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_4.png}
+        \end{subfigure}
+    \end{figure}
+\end{frame}
+\begin{frame}
+    \begin{figure}[htbp]
+        \centering
+        \begin{subfigure}[b]{0.8\textwidth}
+          \includegraphics[width=\linewidth]{/home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_5.png}
+        \end{subfigure}
+        \par\medskip
+        \begin{subfigure}[b]{0.8\textwidth}
+          \includegraphics[width=\linewidth]{/home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_6.png}
+        \end{subfigure}
+        
+        \label{fig:interpolated_density}
+    \end{figure}
+\end{frame}
+
+
+
+
 
 \begin{frame}{Flow matching}
         The framework is as follow : \\

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.2.11)  30 APR 2025 12:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.2.11)  2 MAY 2025 15:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -534,45 +534,191 @@ Package: amsthm 2020/05/29 v2.20.6
 ) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasethemes.sty)) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerthemedefault.sty (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerfontthemedefault.sty) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamercolorthemedefault.sty) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerinnerthemedefault.sty
 \beamer@dima=\dimen292
 \beamer@dimb=\dimen293
-) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerouterthemedefault.sty))) (/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerouterthemedefault.sty))) (./beamerthemeCemef.sty (/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjustbox.sty
+Package: adjustbox 2022/10/17 v1.3a Adjusting TeX boxes (trim, clip, ...)
+ (/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
+ (/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex (/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks46
+\XKV@tempa@toks=\toks47
+)
+\XKV@depth=\count336
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+)) (/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjcalc.sty
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back-ends (calc, etex, pgfmath)
+) (/usr/share/texlive/texmf-dist/tex/latex/adjustbox/trimclip.sty
+Package: trimclip 2020/08/19 v1.2 Trim and clip general TeX material
+ (/usr/share/texlive/texmf-dist/tex/latex/collectbox/collectbox.sty
+Package: collectbox 2022/10/17 v0.4c Collect macro arguments as boxes
+\collectedbox=\box76
+)
+\tc@llx=\dimen294
+\tc@lly=\dimen295
+\tc@urx=\dimen296
+\tc@ury=\dimen297
+Package trimclip Info: Using driver 'tc-pdftex.def'.
+ (/usr/share/texlive/texmf-dist/tex/latex/adjustbox/tc-pdftex.def
+File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
+))
+\adjbox@Width=\dimen298
+\adjbox@Height=\dimen299
+\adjbox@Depth=\dimen300
+\adjbox@Totalheight=\dimen301
+\adjbox@pwidth=\dimen302
+\adjbox@pheight=\dimen303
+\adjbox@pdepth=\dimen304
+\adjbox@ptotalheight=\dimen305
+ (/usr/share/texlive/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
+Package: ifoddpage 2022/10/18 v1.2 Conditionals for odd/even page detection
+\c@checkoddpage=\count337
+) (/usr/share/texlive/texmf-dist/tex/latex/varwidth/varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box77
+\sift@deathcycles=\count338
+\@vwid@loff=\dimen306
+\@vwid@roff=\dimen307
+)) (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerfontthemeprofessionalfonts.sty) (/usr/share/texlive/texmf-dist/tex/latex/ragged2e/ragged2e.sty
+Package: ragged2e 2023/06/22 v3.6 ragged2e Package
+\CenteringLeftskip=\skip65
+\RaggedLeftLeftskip=\skip66
+\RaggedRightLeftskip=\skip67
+\CenteringRightskip=\skip68
+\RaggedLeftRightskip=\skip69
+\RaggedRightRightskip=\skip70
+\CenteringParfillskip=\skip71
+\RaggedLeftParfillskip=\skip72
+\RaggedRightParfillskip=\skip73
+\JustifyingParfillskip=\skip74
+\CenteringParindent=\skip75
+\RaggedLeftParindent=\skip76
+\RaggedRightParindent=\skip77
+\JustifyingParindent=\skip78
+) (/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+Package: pgf 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfnodeparttextbox=\box78
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
+Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
+\pgf@nodesepstart=\dimen308
+\pgf@nodesepend=\dimen309
+) (/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
+Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
+)) (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgffor.sty (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
+\pgffor@iter=\dimen310
+\pgffor@skip=\dimen311
+\pgffor@stack=\toks48
+\pgffor@toks=\toks49
+)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@plot@mark@count=\count339
+\pgfplotmarksize=\dimen312
+)
+\tikz@lastx=\dimen313
+\tikz@lasty=\dimen314
+\tikz@lastxsaved=\dimen315
+\tikz@lastysaved=\dimen316
+\tikz@lastmovetox=\dimen317
+\tikz@lastmovetoy=\dimen318
+\tikzleveldistance=\dimen319
+\tikzsiblingdistance=\dimen320
+\tikz@figbox=\box79
+\tikz@figbox@bg=\box80
+\tikz@tempbox=\box81
+\tikz@tempbox@bg=\box82
+\tikztreelevel=\count340
+\tikznumberofchildren=\count341
+\tikznumberofcurrentchild=\count342
+\tikz@fig@count=\count343
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfmatrixcurrentrow=\count344
+\pgfmatrixcurrentcolumn=\count345
+\pgf@matrix@numberofcolumns=\count346
+)
+\tikz@expandcount=\count347
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)))) (/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
 Package: array 2023/10/16 v2.5g Tabular extension package (FMi)
-\col@sep=\dimen294
-\ar@mcellbox=\box76
-\extrarowheight=\dimen295
-\NC@list=\toks46
-\extratabsurround=\skip65
-\backup@length=\skip66
-\ar@cellbox=\box77
+\col@sep=\dimen321
+\ar@mcellbox=\box83
+\extrarowheight=\dimen322
+\NC@list=\toks50
+\extratabsurround=\skip79
+\backup@length=\skip80
+\ar@cellbox=\box84
 ) (/usr/share/texlive/texmf-dist/tex/latex/makecell/makecell.sty
 Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
-\rotheadsize=\dimen296
-\c@nlinenum=\count336
-\TeXr@lab=\toks47
+\rotheadsize=\dimen323
+\c@nlinenum=\count348
+\TeXr@lab=\toks51
+) (/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
+ (/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+ (/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen324
+\captionmargin=\dimen325
+\caption@leftmargin=\dimen326
+\caption@rightmargin=\dimen327
+\caption@width=\dimen328
+\caption@indent=\dimen329
+\caption@parindent=\dimen330
+\caption@hangindent=\dimen331
+Package caption Info: beamer document class detected.
+ (/usr/share/texlive/texmf-dist/tex/latex/caption/caption-beamer.sto
+File: caption-beamer.sto 2022/01/06 v2.0c Adaption of the caption package to the beamer document classes (AR)
+))
+\c@caption@flags=\count349
+\c@continuedfloat=\count350
+Package caption Info: hyperref package is loaded.
+Package caption Info: Hyperref support is turned off
+(caption)             because hyperref has stopped early.
+)
+Package caption Info: New subtype `subfigure' on input line 238.
+\c@subfigure=\count351
+Package caption Info: New subtype `subtable' on input line 238.
+\c@subtable=\count352
+) (/usr/share/texlive/texmf-dist/tex/latex/parskip/parskip.sty
+Package: parskip 2021-03-14 v2.0h non-zero parskip adjustments
+) (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2021/02/14 v1.3d Input encoding file
+\inpenc@prehook=\toks52
+\inpenc@posthook=\toks53
+) (/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
 ) (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count337
-\l__pdf_internal_box=\box78
+\l__color_backend_stack_int=\count353
+\l__pdf_internal_box=\box85
 ) (./pres.aux)
 \openout1 = `pres.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -610,77 +756,34 @@ LaTeX Font Info:    ... okay on input line 11.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count338
-\scratchdimen=\dimen297
-\scratchbox=\box79
-\nofMPsegments=\count339
-\nofMParguments=\count340
-\everyMPshowfont=\toks48
-\MPscratchCnt=\count341
-\MPscratchDim=\dimen298
-\MPnumerator=\count342
-\makeMPintoPDFobject=\count343
-\everyMPtoPDFconversion=\toks49
+\scratchcounter=\count354
+\scratchdimen=\dimen332
+\scratchbox=\box86
+\nofMPsegments=\count355
+\nofMParguments=\count356
+\everyMPshowfont=\toks54
+\MPscratchCnt=\count357
+\MPscratchDim=\dimen333
+\MPnumerator=\count358
+\makeMPintoPDFobject=\count359
+\everyMPtoPDFconversion=\toks55
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+ (/usr/share/texlive/texmf-dist/tex/latex/grfext/grfext.sty
+Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
+)
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 504.
  (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package hyperref Info: Link coloring OFF on input line 11.
+Package hyperref Info: Link coloring OFF on input line 19.
  (./pres.out) (./pres.out)
 \@outlinefile=\write5
 \openout5 = `pres.out'.
 
-LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 11.
-LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 11.
-\symnumbers=\mathgroup6
-\sympureletters=\mathgroup7
-LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/cmr/m/n on input line 11.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 11.
-LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 11.
-LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 11.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 11.
-LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 11.
-LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmss/m/n on input line 11.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 11.
-LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> OT1/cmss/m/it on input line 11.
-LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 11.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 11.
-LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 11.
-LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 11.
-LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/b/n on input line 11.
-LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  OT1/cmss/m/it --> OT1/cmss/b/it on input line 11.
-LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/cmss/b/n --> OT1/cmr/b/n on input line 11.
-LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmss/b/n --> OT1/cmss/b/n on input line 11.
-LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/b/n on input line 11.
-LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmss/m/it --> OT1/cmss/b/it on input line 11.
-LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/b/n on input line 11.
-LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 11.
-LaTeX Font Info:    Overwriting symbol font `pureletters' in version `normal'
-(Font)                  OT1/cmss/m/it --> OT1/mathkerncmss/m/sl on input line 11.
-LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  OT1/cmss/b/it --> OT1/mathkerncmss/m/sl on input line 11.
-LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  OT1/mathkerncmss/m/sl --> OT1/mathkerncmss/bx/sl on input line 11.
  (/usr/share/texlive/texmf-dist/tex/latex/translator/translator-basic-dictionary-English.dict
 Dictionary: translator-basic-dictionary, Language: English 
 ) (/usr/share/texlive/texmf-dist/tex/latex/translator/translator-bibliography-dictionary-English.dict
@@ -693,46 +796,261 @@ Dictionary: translator-months-dictionary, Language: English
 Dictionary: translator-numbers-dictionary, Language: English 
 ) (/usr/share/texlive/texmf-dist/tex/latex/translator/translator-theorem-dictionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
-) (./pres.nav) [1
+)
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+ (./pres.nav)
+<images/LogoMPT-PSL.png, id=19, 1041.8925pt x 335.00156pt>
+File: images/LogoMPT-PSL.png Graphic file (type png)
+<use images/LogoMPT-PSL.png>
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 19.
+(pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 21.
+Overfull \hbox (14.09439pt too wide) has occurred while \output is active
+[] 
+ []
+
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc} <./images/MinesParisTech_title_page.png>]
+File: images/LogoMPT-PSL.png Graphic file (type png)
+<use images/LogoMPT-PSL.png>
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 29.
+(pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 29.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 21.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 29.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on input line 21.
- (/usr/share/texlive/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
-File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/mathkerncmss.
-) [2
+File: images/LogoMPT-PSL.png Graphic file (type png)
+<use images/LogoMPT-PSL.png>
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 29.
+(pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
 
-] [3
+Overfull \hbox (9.38701pt too wide) has occurred while \output is active
+[] 
+ []
+
+[2
+
+ <./images/LogoMPT-PSL.png>]
+File: images/LogoMPT-PSL.png Graphic file (type png)
+<use images/LogoMPT-PSL.png>
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 44.
+(pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
+File: images/LogoMPT-PSL.png Graphic file (type png)
+<use images/LogoMPT-PSL.png>
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 44.
+(pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
+
+Overfull \hbox (9.38701pt too wide) has occurred while \output is active
+[] 
+ []
+
+[3
 
 ]
-<score_based_dog.png, id=105, 1781.65625pt x 382.42876pt>
+File: images/LogoMPT-PSL.png Graphic file (type png)
+<use images/LogoMPT-PSL.png>
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 55.
+(pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
+<score_based_dog.png, id=56, 1781.65625pt x 382.42876pt>
 File: score_based_dog.png Graphic file (type png)
 <use score_based_dog.png>
-Package pdftex.def Info: score_based_dog.png  used on input line 47.
+Package pdftex.def Info: score_based_dog.png  used on input line 55.
 (pdftex.def)             Requested size: 307.28987pt x 65.95735pt.
- [4
+File: images/LogoMPT-PSL.png Graphic file (type png)
+<use images/LogoMPT-PSL.png>
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 55.
+(pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
 
- <./score_based_dog.png>] [5
+Overfull \hbox (9.38701pt too wide) has occurred while \output is active
+[] 
+ []
 
-] [6
+[4
 
-] [7
+ <./score_based_dog.png>]
+File: images/LogoMPT-PSL.png Graphic file (type png)
+<use images/LogoMPT-PSL.png>
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 68.
+(pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
+File: images/LogoMPT-PSL.png Graphic file (type png)
+<use images/LogoMPT-PSL.png>
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 68.
+(pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
 
-] [8
+Overfull \hbox (9.38701pt too wide) has occurred while \output is active
+[] 
+ []
+
+[5
 
 ]
-Overfull \hbox (80.81708pt too wide) in paragraph at lines 108--108
-[][]  
+File: images/LogoMPT-PSL.png Graphic file (type png)
+<use images/LogoMPT-PSL.png>
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 75.
+(pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
+File: images/LogoMPT-PSL.png Graphic file (type png)
+<use images/LogoMPT-PSL.png>
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 75.
+(pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
+
+Overfull \hbox (9.38701pt too wide) has occurred while \output is active
+[] 
+ []
+
+[6
+
+]
+File: images/LogoMPT-PSL.png Graphic file (type png)
+<use images/LogoMPT-PSL.png>
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 87.
+(pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
+File: images/LogoMPT-PSL.png Graphic file (type png)
+<use images/LogoMPT-PSL.png>
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 87.
+(pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
+
+Overfull \hbox (9.38701pt too wide) has occurred while \output is active
+[] 
+ []
+
+[7
+
+]
+File: images/LogoMPT-PSL.png Graphic file (type png)
+<use images/LogoMPT-PSL.png>
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 102.
+(pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
+</home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_1.png, id=89, 578.16pt x 289.08pt>
+File: /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_1.png Graphic file (type png)
+<use /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_1.png>
+Package pdftex.def Info: /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_1.png  used on input line 102.
+(pdftex.def)             Requested size: 245.83282pt x 122.9125pt.
+</home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_2.png, id=90, 578.16pt x 289.08pt>
+File: /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_2.png Graphic file (type png)
+<use /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_2.png>
+Package pdftex.def Info: /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_2.png  used on input line 102.
+(pdftex.def)             Requested size: 245.83282pt x 122.9125pt.
+
+Overfull \vbox (4.49992pt too high) detected at line 102
+ []
+
+File: images/LogoMPT-PSL.png Graphic file (type png)
+<use images/LogoMPT-PSL.png>
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 102.
+(pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
+
+Overfull \hbox (9.38701pt too wide) has occurred while \output is active
+[] 
+ []
+
+[8
+
+ </home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_1.png> </home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_2.png>]
+File: images/LogoMPT-PSL.png Graphic file (type png)
+<use images/LogoMPT-PSL.png>
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 115.
+(pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
+</home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_3.png, id=100, 578.16pt x 289.08pt>
+File: /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_3.png Graphic file (type png)
+<use /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_3.png>
+Package pdftex.def Info: /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_3.png  used on input line 115.
+(pdftex.def)             Requested size: 245.83282pt x 122.9125pt.
+</home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_4.png, id=101, 578.16pt x 289.08pt>
+File: /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_4.png Graphic file (type png)
+<use /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_4.png>
+Package pdftex.def Info: /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_4.png  used on input line 115.
+(pdftex.def)             Requested size: 245.83282pt x 122.9125pt.
+
+Overfull \vbox (4.49992pt too high) detected at line 115
+ []
+
+File: images/LogoMPT-PSL.png Graphic file (type png)
+<use images/LogoMPT-PSL.png>
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 115.
+(pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
+
+Overfull \hbox (9.38701pt too wide) has occurred while \output is active
+[] 
  []
 
 [9
+
+ </home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_3.png> </home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_4.png>]
+File: images/LogoMPT-PSL.png Graphic file (type png)
+<use images/LogoMPT-PSL.png>
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 129.
+(pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
+</home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_5.png, id=111, 578.16pt x 289.08pt>
+File: /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_5.png Graphic file (type png)
+<use /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_5.png>
+Package pdftex.def Info: /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_5.png  used on input line 129.
+(pdftex.def)             Requested size: 245.83282pt x 122.9125pt.
+</home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_6.png, id=112, 578.16pt x 289.08pt>
+File: /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_6.png Graphic file (type png)
+<use /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_6.png>
+Package pdftex.def Info: /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_6.png  used on input line 129.
+(pdftex.def)             Requested size: 245.83282pt x 122.9125pt.
+
+Overfull \vbox (4.49992pt too high) detected at line 129
+ []
+
+File: images/LogoMPT-PSL.png Graphic file (type png)
+<use images/LogoMPT-PSL.png>
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 129.
+(pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
+
+Overfull \hbox (9.38701pt too wide) has occurred while \output is active
+[] 
+ []
+
+[10
+
+ </home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_5.png> </home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_6.png>]
+File: images/LogoMPT-PSL.png Graphic file (type png)
+<use images/LogoMPT-PSL.png>
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 142.
+(pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
+
+
+LaTeX Warning: Reference `ODE' on page 11 undefined on input line 142.
+
+File: images/LogoMPT-PSL.png Graphic file (type png)
+<use images/LogoMPT-PSL.png>
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 142.
+(pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
+
+Overfull \hbox (9.38701pt too wide) has occurred while \output is active
+[] 
+ []
+
+[11
+
+]
+File: images/LogoMPT-PSL.png Graphic file (type png)
+<use images/LogoMPT-PSL.png>
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 157.
+(pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
+
+Overfull \hbox (77.50526pt too wide) in paragraph at lines 157--157
+[][]  
+ []
+
+File: images/LogoMPT-PSL.png Graphic file (type png)
+<use images/LogoMPT-PSL.png>
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 157.
+(pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
+
+Overfull \hbox (9.38701pt too wide) has occurred while \output is active
+[] 
+ []
+
+[12
 
 ]
 \tf@nav=\write6
@@ -749,22 +1067,29 @@ Overfull \hbox (80.81708pt too wide) in paragraph at lines 108--108
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
+
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `pres.out' has not changed.
 (rerunfilecheck)             Checksum: 47949AC7C3DCEDDDEEFE3CD50587DDA1;103.
  ) 
 Here is how much of TeX's memory you used:
- 21561 strings out of 474222
- 411831 string characters out of 5748733
- 1938975 words of memory out of 5000000
- 43356 multiletter control sequences out of 15000+600000
- 565126 words of font info for 61 fonts, out of 8000000 for 9000
+ 27735 strings out of 474222
+ 544620 string characters out of 5748733
+ 1937975 words of memory out of 5000000
+ 49399 multiletter control sequences out of 15000+600000
+ 571644 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 128i,25n,123p,438b,561s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on pres.pdf (9 pages, 796257 bytes).
+ 128i,25n,131p,583b,677s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+pdfTeX warning (dest): name{ODE} has been referenced but does not exist, replaced by a fixed one
+
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss0600.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsx1095.pfb>
+Output written on pres.pdf (12 pages, 1094863 bytes).
 PDF statistics:
- 314 PDF objects out of 1000 (max. 8388607)
- 271 compressed objects within 3 object streams
- 21 named destinations out of 1000 (max. 500000)
- 56 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 216 PDF objects out of 1000 (max. 8388607)
+ 133 compressed objects within 2 object streams
+ 28 named destinations out of 1000 (max. 500000)
+ 96 words of extra memory for PDF output out of 10000 (max. 10000000)
 
