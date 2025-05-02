@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.2.11)  29 APR 2025 16:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.2.11)  2 MAY 2025 16:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -244,43 +244,67 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 \CommentStream=\write3
  Excluding comment 'comment') (/usr/share/texlive/texmf-dist/tex/latex/parskip/parskip.sty
 Package: parskip 2021-03-14 v2.0h non-zero parskip adjustments
+) (/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
+ (/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+ (/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen164
+\captionmargin=\dimen165
+\caption@leftmargin=\dimen166
+\caption@rightmargin=\dimen167
+\caption@width=\dimen168
+\caption@indent=\dimen169
+\caption@parindent=\dimen170
+\caption@hangindent=\dimen171
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count288
+\c@continuedfloat=\count289
+Package caption Info: hyperref package is loaded.
+)
+Package caption Info: New subtype `subfigure' on input line 238.
+\c@subfigure=\count290
+Package caption Info: New subtype `subtable' on input line 238.
+\c@subtable=\count291
 ) (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count288
+\l__color_backend_stack_int=\count292
 \l__pdf_internal_box=\box53
 ) (./flow.aux)
 \openout1 = `flow.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count289
-\scratchdimen=\dimen164
+\scratchcounter=\count293
+\scratchdimen=\dimen172
 \scratchbox=\box54
-\nofMPsegments=\count290
-\nofMParguments=\count291
+\nofMPsegments=\count294
+\nofMParguments=\count295
 \everyMPshowfont=\toks25
-\MPscratchCnt=\count292
-\MPscratchDim=\dimen165
-\MPnumerator=\count293
-\makeMPintoPDFobject=\count294
+\MPscratchCnt=\count296
+\MPscratchDim=\dimen173
+\MPnumerator=\count297
+\makeMPintoPDFobject=\count298
 \everyMPtoPDFconversion=\toks26
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -322,46 +346,94 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 13.
+Package hyperref Info: Link coloring OFF on input line 14.
 (./flow.out) (./flow.out)
 \@outlinefile=\write4
 \openout4 = `flow.out'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 15.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 16.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 15.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 16.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) Excluding 'comment' comment. [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] Excluding 'comment' comment.
-Underfull \hbox (badness 10000) in paragraph at lines 110--113
+</home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_1.png, id=61, 578.16pt x 289.08pt>
+File: /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_1.png Graphic file (type png)
+<use /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_1.png>
+Package pdftex.def Info: /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_1.png  used on input line 78.
+(pdftex.def)             Requested size: 230.18253pt x 115.08739pt.
+</home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_2.png, id=63, 578.16pt x 289.08pt>
+File: /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_2.png Graphic file (type png)
+<use /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_2.png>
+Package pdftex.def Info: /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_2.png  used on input line 83.
+(pdftex.def)             Requested size: 230.18253pt x 115.08739pt.
+</home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_3.png, id=64, 578.16pt x 289.08pt>
+File: /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_3.png Graphic file (type png)
+<use /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_3.png>
+Package pdftex.def Info: /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_3.png  used on input line 88.
+(pdftex.def)             Requested size: 230.18253pt x 115.08739pt.
+</home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_4.png, id=65, 578.16pt x 289.08pt>
+File: /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_4.png Graphic file (type png)
+<use /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_4.png>
+Package pdftex.def Info: /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_4.png  used on input line 93.
+(pdftex.def)             Requested size: 230.18253pt x 115.08739pt.
+</home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_5.png, id=66, 578.16pt x 289.08pt>
+File: /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_5.png Graphic file (type png)
+<use /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_5.png>
+Package pdftex.def Info: /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_5.png  used on input line 98.
+(pdftex.def)             Requested size: 230.18253pt x 115.08739pt.
+</home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_6.png, id=67, 578.16pt x 289.08pt>
+File: /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_6.png Graphic file (type png)
+<use /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_6.png>
+Package pdftex.def Info: /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_6.png  used on input line 103.
+(pdftex.def)             Requested size: 230.18253pt x 115.08739pt.
+ [2 </home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_1.png> </home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_2.png> </home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_3.png> </home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_4.png> </home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_5.png> </home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_6.png>]
+</home/admin-sbraik/Documents/InternshipProduction/FlowMatching/FlowMatchingBasics.png, id=80, 576.1525pt x 165.61874pt>
+File: /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/FlowMatchingBasics.png Graphic file (type png)
+<use /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/FlowMatchingBasics.png>
+Package pdftex.def Info: /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/FlowMatchingBasics.png  used on input line 130.
+(pdftex.def)             Requested size: 375.80544pt x 108.0325pt.
+</home/admin-sbraik/Documents/InternshipProduction/FlowMatching/FlowMatchingFramework.png, id=83, 694.595pt x 569.12625pt>
+File: /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/FlowMatchingFramework.png Graphic file (type png)
+<use /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/FlowMatchingFramework.png>
+Package pdftex.def Info: /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/FlowMatchingFramework.png  used on input line 154.
+(pdftex.def)             Requested size: 375.80544pt x 307.93149pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 162--165
 
  []
 
-[2] Excluding 'comment' comment. [3] (./flow.bbl) [4] (./flow.aux)
+[3 </home/admin-sbraik/Documents/InternshipProduction/FlowMatching/FlowMatchingBasics.png>] [4 </home/admin-sbraik/Documents/InternshipProduction/FlowMatching/FlowMatchingFramework.png>] [5] Excluding 'comment' comment. [6] (./flow.bbl) [7] (./flow.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
 Package rerunfilecheck Info: File `flow.out' has not changed.
-(rerunfilecheck)             Checksum: 4DB1A79F9A13240B4D59AA57D0401A35;1084.
+(rerunfilecheck)             Checksum: C0B56F5B2BB3DF851ED512053074889C;1136.
  ) 
 Here is how much of TeX's memory you used:
- 10174 strings out of 474222
- 154263 string characters out of 5748733
+ 11675 strings out of 474222
+ 187172 string characters out of 5748733
  1944975 words of memory out of 5000000
- 32272 multiletter control sequences out of 15000+600000
- 565932 words of font info for 67 fonts, out of 8000000 for 9000
+ 33752 multiletter control sequences out of 15000+600000
+ 566231 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,22n,79p,552b,455s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on flow.pdf (4 pages, 184116 bytes).
+ 75i,22n,79p,575b,532s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on flow.pdf (7 pages, 351918 bytes).
 PDF statistics:
- 164 PDF objects out of 1000 (max. 8388607)
- 126 compressed objects within 2 object streams
- 35 named destinations out of 1000 (max. 500000)
- 65 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 223 PDF objects out of 1000 (max. 8388607)
+ 160 compressed objects within 2 object streams
+ 46 named destinations out of 1000 (max. 500000)
+ 113 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -5,6 +5,7 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage{comment}
 \usepackage{parskip}
+\usepackage{subcaption}
 
 \title{Statistical approach ``review''}
 \author{Samy Braik}
@@ -58,58 +59,114 @@ where \( Z_0^{(i)} = f_\theta^{-1}(X_i) \), and each \( Z_k^{(i)} \) is computed
 
 %Normalizing flows requires invertibility of the mappings and an efficient way to compute the determinant of there Jacobian. Therefore, components have to be chosen carefully.
 
-\subsection{Flow}
-A $C^r$ flow is a time-dependent mapping $\phi : [0,1]\times \mathbb{R}^d\rightarrow\mathbb{R}^d$ characterized by $\phi(t,x) \rightarrow \phi_t(x)$ such that for all $t\in[0,1]$, $\phi_t$ is a $C^r$ diffeomorphism in $x$.
-We define a flow model by applying a flow $\phi_t$ to the random variable $X_0$
-\begin{align}\label{flow-model}
-    X_t=\phi_t(X_0), \quad t \in[0,1], X_0\sim p 
-\end{align}
-Alternatively, we can define a flow using a velocity field \(v_t:[0,1]\times\mathbb{R}^d\rightarrow \mathbb{R}^d\) characterized by \(v:(t,x)\rightarrow v_t(x)\) via the following ODE 
-
-\begin{align}\label{ODE}
-\left\{
-    \begin{array}{ll}
-        \partial_t \phi_t(x)&=v_t(\phi_t(x))\\
-        \phi_0(x)&=x 
-    \end{array}
-\right.
-\end{align}
-
-We can derive a probability path as the marginal PDF of a flow model~\ref{flow-model} at time \(t\) by \(X_t\sim p_t\). This PDF is obtained by a push-forward formula 
-\begin{align}\label{pushforward}
-    p_t(x) = p\left(\phi^{-1}(x)\right) \left|\det \partial_x \phi^{-1}(x)\right|
-\end{align} 
-%Knowing \(v_t\) allow us to generate \(p_t\).
+\section{Notations}
+We start by defining a probability density path \(p:[0,1]\times\mathbb{R}^d\rightarrow\mathbb{R}^d\) meaning that for each time \(t\), \(p_t\) is density function i.e. \(\int p_t(x)dx=1\).\\
+A simple example of such a path is a path \(p\) interpolating two density \(p_0\) and \(p_1\) with \(p_t=tp_1+(1-t)p_0\)
 
 \begin{comment}
-\subsection{Continuous normalizing flow}
-
-In continuous normalizing flow framework, \(f\) is obtained using a continuous dynamic 
-\begin{align}
-    \frac{\partial x_0}{\partial t} = f(x_t,t)
-\end{align}
-In continuous normalizing flows, \(f\) is obtzined by solving the neural ODE 
-\begin{align}
-    x_T = x_0+\int_0^T f(x_t,t)^{\theta} dt
-\end{align}
-
-CNF are trained by maximizing the log-likelyhood 
-\begin{align}
-    \mathcal{L}(\theta) = \mathbb{E}[\log p(x)]
-\end{align}
+\begin{figure}[h]
+    \centering
+    \animategraphics[autoplay,loop,width=1\linewidth]{10}{frame_}{000}{019}
+    \caption{Probability path interpolating $\mathcal{N}(0,0.2)$ and $\mathcal{U}([0,1])$}
+    \label{fig:interpolated_density}
+\end{figure}
 \end{comment}
 
-\subsection{Flow matching}
-%Combination of CNF and Diffusion models
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}[b]{0.49\textwidth}
+      \includegraphics[width=\linewidth]{/home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_1.png}
+      \caption{}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.49\textwidth}
+      \includegraphics[width=\linewidth]{/home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_2.png}
+      \caption{}
+    \end{subfigure}
+    \par\medskip
+    \begin{subfigure}[b]{0.49\textwidth}
+      \includegraphics[width=\linewidth]{/home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_3.png}
+      \caption{}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.49\textwidth}
+      \includegraphics[width=\linewidth]{/home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_4.png}
+      \caption{}
+    \end{subfigure}
+    \par\medskip
+    \begin{subfigure}[b]{0.49\textwidth}
+      \includegraphics[width=\linewidth]{/home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_5.png}
+      \caption{}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.49\textwidth}
+      \includegraphics[width=\linewidth]{/home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_6.png}
+      \caption{}
+    \end{subfigure}
+    \caption{A probability path interpolating $\mathcal{N}(0,0.2)$ and $\mathcal{U}([0,1])$}
+    \label{fig:interpolated_density}
+\end{figure}
 
-Using the notions defined in the previous section, we know introduce the Flow Matching framework.
-Given a known source distribution \(q\) and an unkown target distribution \(p\), we define a probability path \(p_t\) interpolating from \(p_0=q\) to \(p_1=p\). We learn a velocity field \(v_t^\theta\) (a neural network) generating the path \(p_t\) and sample according to the learned model by solving the ODE~(\ref{ODE}). \\
-In order to learn \(v_t^\theta\), we minimize the flow matching loss
+\newpage
+
+Next we introduce a core object, a time dependant vector field \(v:[0,1]\times \mathbb{R}^d\rightarrow\mathbb{R}^d\) which can be used to construct a map \(\phi:[0,1]\times\mathbb{R}^d\rightarrow\mathbb{R}^d\), called a flow, by the following ODE
 \begin{align}
-    \mathcal{L}_\text{FM}(\theta):=\mathbb{E}[\|v_t(X_t)-v_t^\theta(X_t)\|^2]= \mathbb{E}[\|v_t^\theta(X_t)-\dot{X_t}\|^2] + c
-\end{align} 
-where \(c = \mathbb{E}[\|\dot{X_t}\|^2]-\mathbb{E}[\|v_t(X_t)\|^2]\) constant with respect to \(\theta\). \\
-%There is no constraint on the neural network and the invertibility needed in~\ref{pushforward} is due to optimal transport argument.
+    \frac{d}{dt}\phi_t(x)&=v_t(\phi_t(x))\\
+    \quad \phi_0(x)&=x \nonumber
+\end{align}  
+The link between the flow and the probability path is given by the change of variables formula 
+\begin{align}
+    p_t(x)=q(\phi_t^{-1}(x))\det \left[\frac{\partial\phi_t^{-1}}{\partial x}(x)\right]
+\end{align}
+This coincides with the normalizing framework. \\
+The link between the vector field and the probability path is given by the continuity equation 
+\begin{align}
+  \frac{d}{dt}p_t(x)+\text{div}(p_t(x)v_t(x))=0
+\end{align}
+It said that the vector field \(v_t\) generates the probability path \(p_t\) if the continuity equation holds.\\
+\bigskip
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{/home/admin-sbraik/Documents/InternshipProduction/FlowMatching/FlowMatchingBasics.png}
+    \caption{How the notions are linked together, from \cite{lipman2024flowmatchingguidecode}}
+    \label{fig:flow_matching_basics}
+\end{figure}
+
+\section{Objective}
+Given a target probability path \(p_t\) and a corresponding \(v_t\) vector field, the naïve flow matching loss is 
+
+\begin{align}
+    \mathcal{L}_\text{FM}(\theta) = \mathbb{E}_{t,p_t(x)}\left[\|v_t^\theta(x)-v_t(x)\|^2\right]
+\end{align}
+
+But we don't have acces to \(v_t\) and \(p_t\). To adress this problem and given a particular data sample \(x_1\), we introduce conditional probability path \(p_t(x|x_1)\) such that \(p_0(x|x_1)=q(x)\) at time \(t=0\) and by marginalizing over \(x_1\) we can recover the marginal probability path  
+\begin{align}
+  p_t(x)=\int p_t(x|x_1)q(x_1)dx_1
+\end{align}
+So instead of defining a path between two entire distributions, we take a samples from our distributions and we just define how to go from one to the other.\\ 
+In the same vein, we can define a conditional vector field, assuming \(p_t(x)\) for all \(t\) and \(x\) 
+\begin{align}
+  v_t(x)=\int v_t(x|x_1)\frac{p_t(x|x_1)q(x_1)}{p_t(x)}dx_1
+\end{align}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.8\textwidth]{/home/admin-sbraik/Documents/InternshipProduction/FlowMatching/FlowMatchingFramework.png}
+  \caption{A visual in \cite{lipman2024flowmatchingguidecode} that illustates well the full framework}
+  \label{fig:flow_matching_framework}
+\end{figure}
+
+Then the author introduces a new loss function called the conditional flow matching loss
+\begin{align}
+  \mathcal{L}_\text{CFM}(\theta) = \mathbb{E}_{t,q(x_1),p_t(x|x_1)}\left[\|v_t^\theta(x|x_1)-v_t(x|x_1)\|^2\right]
+\end{align}
+with a strong property : \(\mathcal{L}_\text{FM}(\theta)=\mathcal{L}_\text{CFM}(\theta)\) up to a constant independent of \(\theta\). \\
+So the focus is now on designing a conditional probability path and vector field and it turns out "the conditional flow matching objective works with any choice of conditional probability path and conditional vector fields". Futhermore, there is an infinite number of vector fields that generate any particular probability path.\\
+
+
+
+\section{Example}
+In the original flow matching paper (\cite{lipman2023flowmatchinggenerativemodeling}), they consider the instance of a Gaussian conditional probability path.
 
 \subsection{Diffusion}
 The general framework of diffusion is divided in two phases. In the forward phase (noising), we start from a random variable distributed according to our target distribution \( p \), gradually add noise until it reaches an easy-to-sample distribution \(q\) which is practically always a Gaussian. Then, in the backward phase (denoising) we reverse the process and start from \(q\) to get back to \(p\). 
