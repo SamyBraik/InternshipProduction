@@ -6,6 +6,8 @@
 \usepackage{comment}
 \usepackage{parskip}
 \usepackage{subcaption}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
 
 \title{Statistical approach ``review''}
 \author{Samy Braik}
@@ -65,7 +67,7 @@ We start by defining a probability density path \(p:[0,1]\times\mathbb{R}^d\righ
 A simple example of such a path is a path \(p\) interpolating two density \(p_0\) and \(p_1\) with \(p_t=tp_1+(1-t)p_0\)
 
 \begin{comment}
-\begin{figure}[h]
+\begin{figure}[htbp]
     \centering
     \animategraphics[autoplay,loop,width=1\linewidth]{10}{frame_}{000}{019}
     \caption{Probability path interpolating $\mathcal{N}(0,0.2)$ and $\mathcal{U}([0,1])$}
@@ -112,7 +114,7 @@ A simple example of such a path is a path \(p\) interpolating two density \(p_0\
 
 \newpage
 
-Next we introduce a core object, a time dependant vector field \(v:[0,1]\times \mathbb{R}^d\rightarrow\mathbb{R}^d\) which can be used to construct a map \(\phi:[0,1]\times\mathbb{R}^d\rightarrow\mathbb{R}^d\), called a flow, by the following ODE
+Next we introduce a core object, a time dependent vector field \(v:[0,1]\times \mathbb{R}^d\rightarrow\mathbb{R}^d\) which can be used to construct a map \(\phi:[0,1]\times\mathbb{R}^d\rightarrow\mathbb{R}^d\), called a flow, by the following ODE
 \begin{align}
     \frac{d}{dt}\phi_t(x)&=v_t(\phi_t(x))\\
     \quad \phi_0(x)&=x \nonumber
@@ -147,7 +149,7 @@ But we don't have acces to \(v_t\) and \(p_t\). To adress this problem and given
   p_t(x)=\int p_t(x|x_1)q(x_1)dx_1
 \end{align}
 So instead of defining a path between two entire distributions, we take a samples from our distributions and we just define how to go from one to the other.\\ 
-In the same vein, we can define a conditional vector field, assuming \(p_t(x)\) for all \(t\) and \(x\) 
+In the same vein, we can define a conditional vector field, assuming \(p_t(x)>0\) for all \(t\) and \(x\) 
 \begin{align}
   v_t(x)=\int v_t(x|x_1)\frac{p_t(x|x_1)q(x_1)}{p_t(x)}dx_1
 \end{align}
@@ -166,7 +168,32 @@ Then the author introduces a new loss function called the conditional flow match
 with a strong property : \(\mathcal{L}_\text{FM}(\theta)=\mathcal{L}_\text{CFM}(\theta)\) up to a constant independent of \(\theta\). \\
 So the focus is now on designing a conditional probability path and vector field and it turns out "the conditional flow matching objective works with any choice of conditional probability path and conditional vector fields". Futhermore, there is an infinite number of vector fields that generate any particular probability path.\\
 
+\subsubsection{Training and sampling}
 
+\begin{algorithm}
+  \caption{Flow matching training}
+      \begin{algorithmic}
+          \State \textbf{Input:} dataset \(p\), noise \(q\)
+          \State Initialized \(v^\theta\)
+          \While{not converged}
+              \State \(t\sim\mathcal{U}([0,1])\)
+              \State \(x_1\sim p(x_1)\)
+              \State \(x_0\sim p(x_0)\)
+              \State Gradient step with \(\nabla_\theta \| v_t^\theta (x_t -\dot{x}_t \-^2)\)
+          \EndWhile
+          \State \textbf{Output:} \(v^\theta\)
+      \end{algorithmic}
+  \end{algorithm}
+
+\begin{algorithm}[H]
+  \caption{Flow matching sampling}\label{alg:flow_matching_sampling}
+      \begin{algorithmic}
+          \State \textbf{Input:} Trained \(v^\theta\)
+          \State \(x_0\sim q(x_0)\)
+          \State Solve numerically the ODE \(\dot{x}_t=v_t^\theta(x_t)\)
+          \State \textbf{Output:} \(x_1\)
+      \end{algorithmic}
+\end{algorithm} 
 
 \subsubsection{Example}
 In the original flow matching paper (\cite{lipman2023flowmatchinggenerativemodeling}), they consider the instance of a Gaussian conditional probability path.
@@ -235,13 +262,15 @@ Just like the previous case, the choice of \(m\) is crucial, and methods like cr
 \bigskip
 %One of the drawbacks of those two methods is they work well when the number of observations \(n\) is big.
 
-\newpage
+
+
 \nocite{Coste_2025}
 \nocite{lipman2024flowmatchingguidecode}
 \nocite{strasman2025analysisnoiseschedulescorebased}
 \nocite{battey2014smoothprojecteddensityestimation}
 \nocite{dionblanc2025nonparametricdensityestimation}
 \nocite{mathieu2024flow}
+\nocite{VisualDive_2025}
 \bibliographystyle{plain}
 \bibliography{references}
 \end{document}

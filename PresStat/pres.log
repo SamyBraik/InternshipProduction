@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.2.11)  2 MAY 2025 15:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.2.11)  5 MAY 2025 16:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -694,31 +694,63 @@ Package: inputenc 2021/02/14 v1.3d Input encoding file
 \inpenc@posthook=\toks53
 ) (/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+) (/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithm.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating environment
+ (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count353
+\float@exts=\toks54
+\float@box=\box85
+\@float@everytoks=\toks55
+\@floatcapt=\box86
+) (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
+)
+\@float@every@algorithm=\toks56
+\c@algorithm=\count354
+) (/usr/share/texlive/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
+Package: algpseudocode 
+ (/usr/share/texlive/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
+Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
+
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+\c@ALG@line=\count355
+\c@ALG@rem=\count356
+\c@ALG@nested=\count357
+\ALG@tlm=\skip81
+\ALG@thistlm=\skip82
+\c@ALG@Lnr=\count358
+\c@ALG@blocknr=\count359
+\c@ALG@storecount=\count360
+\c@ALG@tmpcounter=\count361
+\ALG@tmplength=\skip83
+)
+Document Style - pseudocode environments for use with the `algorithmicx' style
 ) (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count353
-\l__pdf_internal_box=\box85
+\l__color_backend_stack_int=\count362
+\l__pdf_internal_box=\box87
 ) (./pres.aux)
 \openout1 = `pres.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -756,17 +788,17 @@ LaTeX Font Info:    ... okay on input line 19.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count354
+\scratchcounter=\count363
 \scratchdimen=\dimen332
-\scratchbox=\box86
-\nofMPsegments=\count355
-\nofMParguments=\count356
-\everyMPshowfont=\toks54
-\MPscratchCnt=\count357
+\scratchbox=\box88
+\nofMPsegments=\count364
+\nofMParguments=\count365
+\everyMPshowfont=\toks57
+\MPscratchCnt=\count366
 \MPscratchDim=\dimen333
-\MPnumerator=\count358
-\makeMPintoPDFobject=\count359
-\everyMPtoPDFconversion=\toks55
+\MPnumerator=\count367
+\makeMPintoPDFobject=\count368
+\everyMPtoPDFconversion=\toks58
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
  (/usr/share/texlive/texmf-dist/tex/latex/grfext/grfext.sty
@@ -779,7 +811,7 @@ Package grfext Info: Graphics extension search list:
  (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package hyperref Info: Link coloring OFF on input line 19.
+Package hyperref Info: Link coloring OFF on input line 23.
  (./pres.out) (./pres.out)
 \@outlinefile=\write5
 \openout5 = `pres.out'.
@@ -798,12 +830,13 @@ Dictionary: translator-numbers-dictionary, Language: English
 Dictionary: translator-theorem-dictionary, Language: English 
 )
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
  (./pres.nav)
 <images/LogoMPT-PSL.png, id=19, 1041.8925pt x 335.00156pt>
 File: images/LogoMPT-PSL.png Graphic file (type png)
 <use images/LogoMPT-PSL.png>
-Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 19.
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 23.
 (pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
 
 Overfull \hbox (14.09439pt too wide) has occurred while \output is active
@@ -815,19 +848,19 @@ Overfull \hbox (14.09439pt too wide) has occurred while \output is active
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc} <./images/MinesParisTech_title_page.png>]
 File: images/LogoMPT-PSL.png Graphic file (type png)
 <use images/LogoMPT-PSL.png>
-Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 29.
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 33.
 (pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 29.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 33.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 29.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 33.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 File: images/LogoMPT-PSL.png Graphic file (type png)
 <use images/LogoMPT-PSL.png>
-Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 29.
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 33.
 (pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
 
 Overfull \hbox (9.38701pt too wide) has occurred while \output is active
@@ -839,11 +872,15 @@ Overfull \hbox (9.38701pt too wide) has occurred while \output is active
  <./images/LogoMPT-PSL.png>]
 File: images/LogoMPT-PSL.png Graphic file (type png)
 <use images/LogoMPT-PSL.png>
-Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 44.
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 50.
 (pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
+
+Overfull \vbox (8.76866pt too high) detected at line 50
+ []
+
 File: images/LogoMPT-PSL.png Graphic file (type png)
 <use images/LogoMPT-PSL.png>
-Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 44.
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 50.
 (pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
 
 Overfull \hbox (9.38701pt too wide) has occurred while \output is active
@@ -855,16 +892,16 @@ Overfull \hbox (9.38701pt too wide) has occurred while \output is active
 ]
 File: images/LogoMPT-PSL.png Graphic file (type png)
 <use images/LogoMPT-PSL.png>
-Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 55.
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 64.
 (pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
 <score_based_dog.png, id=56, 1781.65625pt x 382.42876pt>
 File: score_based_dog.png Graphic file (type png)
 <use score_based_dog.png>
-Package pdftex.def Info: score_based_dog.png  used on input line 55.
+Package pdftex.def Info: score_based_dog.png  used on input line 64.
 (pdftex.def)             Requested size: 307.28987pt x 65.95735pt.
 File: images/LogoMPT-PSL.png Graphic file (type png)
 <use images/LogoMPT-PSL.png>
-Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 55.
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 64.
 (pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
 
 Overfull \hbox (9.38701pt too wide) has occurred while \output is active
@@ -876,11 +913,11 @@ Overfull \hbox (9.38701pt too wide) has occurred while \output is active
  <./score_based_dog.png>]
 File: images/LogoMPT-PSL.png Graphic file (type png)
 <use images/LogoMPT-PSL.png>
-Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 68.
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 77.
 (pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
 File: images/LogoMPT-PSL.png Graphic file (type png)
 <use images/LogoMPT-PSL.png>
-Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 68.
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 77.
 (pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
 
 Overfull \hbox (9.38701pt too wide) has occurred while \output is active
@@ -892,11 +929,11 @@ Overfull \hbox (9.38701pt too wide) has occurred while \output is active
 ]
 File: images/LogoMPT-PSL.png Graphic file (type png)
 <use images/LogoMPT-PSL.png>
-Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 75.
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 84.
 (pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
 File: images/LogoMPT-PSL.png Graphic file (type png)
 <use images/LogoMPT-PSL.png>
-Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 75.
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 84.
 (pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
 
 Overfull \hbox (9.38701pt too wide) has occurred while \output is active
@@ -908,11 +945,11 @@ Overfull \hbox (9.38701pt too wide) has occurred while \output is active
 ]
 File: images/LogoMPT-PSL.png Graphic file (type png)
 <use images/LogoMPT-PSL.png>
-Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 87.
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 96.
 (pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
 File: images/LogoMPT-PSL.png Graphic file (type png)
 <use images/LogoMPT-PSL.png>
-Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 87.
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 96.
 (pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
 
 Overfull \hbox (9.38701pt too wide) has occurred while \output is active
@@ -924,25 +961,25 @@ Overfull \hbox (9.38701pt too wide) has occurred while \output is active
 ]
 File: images/LogoMPT-PSL.png Graphic file (type png)
 <use images/LogoMPT-PSL.png>
-Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 102.
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 111.
 (pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
 </home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_1.png, id=89, 578.16pt x 289.08pt>
 File: /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_1.png Graphic file (type png)
 <use /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_1.png>
-Package pdftex.def Info: /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_1.png  used on input line 102.
+Package pdftex.def Info: /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_1.png  used on input line 111.
 (pdftex.def)             Requested size: 245.83282pt x 122.9125pt.
 </home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_2.png, id=90, 578.16pt x 289.08pt>
 File: /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_2.png Graphic file (type png)
 <use /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_2.png>
-Package pdftex.def Info: /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_2.png  used on input line 102.
+Package pdftex.def Info: /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_2.png  used on input line 111.
 (pdftex.def)             Requested size: 245.83282pt x 122.9125pt.
 
-Overfull \vbox (4.49992pt too high) detected at line 102
+Overfull \vbox (4.49992pt too high) detected at line 111
  []
 
 File: images/LogoMPT-PSL.png Graphic file (type png)
 <use images/LogoMPT-PSL.png>
-Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 102.
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 111.
 (pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
 
 Overfull \hbox (9.38701pt too wide) has occurred while \output is active
@@ -954,25 +991,25 @@ Overfull \hbox (9.38701pt too wide) has occurred while \output is active
  </home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_1.png> </home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_2.png>]
 File: images/LogoMPT-PSL.png Graphic file (type png)
 <use images/LogoMPT-PSL.png>
-Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 115.
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 124.
 (pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
 </home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_3.png, id=100, 578.16pt x 289.08pt>
 File: /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_3.png Graphic file (type png)
 <use /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_3.png>
-Package pdftex.def Info: /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_3.png  used on input line 115.
+Package pdftex.def Info: /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_3.png  used on input line 124.
 (pdftex.def)             Requested size: 245.83282pt x 122.9125pt.
 </home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_4.png, id=101, 578.16pt x 289.08pt>
 File: /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_4.png Graphic file (type png)
 <use /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_4.png>
-Package pdftex.def Info: /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_4.png  used on input line 115.
+Package pdftex.def Info: /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_4.png  used on input line 124.
 (pdftex.def)             Requested size: 245.83282pt x 122.9125pt.
 
-Overfull \vbox (4.49992pt too high) detected at line 115
+Overfull \vbox (4.49992pt too high) detected at line 124
  []
 
 File: images/LogoMPT-PSL.png Graphic file (type png)
 <use images/LogoMPT-PSL.png>
-Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 115.
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 124.
 (pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
 
 Overfull \hbox (9.38701pt too wide) has occurred while \output is active
@@ -984,25 +1021,25 @@ Overfull \hbox (9.38701pt too wide) has occurred while \output is active
  </home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_3.png> </home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_4.png>]
 File: images/LogoMPT-PSL.png Graphic file (type png)
 <use images/LogoMPT-PSL.png>
-Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 129.
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 138.
 (pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
 </home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_5.png, id=111, 578.16pt x 289.08pt>
 File: /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_5.png Graphic file (type png)
 <use /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_5.png>
-Package pdftex.def Info: /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_5.png  used on input line 129.
+Package pdftex.def Info: /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_5.png  used on input line 138.
 (pdftex.def)             Requested size: 245.83282pt x 122.9125pt.
 </home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_6.png, id=112, 578.16pt x 289.08pt>
 File: /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_6.png Graphic file (type png)
 <use /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_6.png>
-Package pdftex.def Info: /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_6.png  used on input line 129.
+Package pdftex.def Info: /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_6.png  used on input line 138.
 (pdftex.def)             Requested size: 245.83282pt x 122.9125pt.
 
-Overfull \vbox (4.49992pt too high) detected at line 129
+Overfull \vbox (4.49992pt too high) detected at line 138
  []
 
 File: images/LogoMPT-PSL.png Graphic file (type png)
 <use images/LogoMPT-PSL.png>
-Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 129.
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 138.
 (pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
 
 Overfull \hbox (9.38701pt too wide) has occurred while \output is active
@@ -1014,15 +1051,11 @@ Overfull \hbox (9.38701pt too wide) has occurred while \output is active
  </home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_5.png> </home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_6.png>]
 File: images/LogoMPT-PSL.png Graphic file (type png)
 <use images/LogoMPT-PSL.png>
-Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 142.
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 152.
 (pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
-
-
-LaTeX Warning: Reference `ODE' on page 11 undefined on input line 142.
-
 File: images/LogoMPT-PSL.png Graphic file (type png)
 <use images/LogoMPT-PSL.png>
-Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 142.
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 152.
 (pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
 
 Overfull \hbox (9.38701pt too wide) has occurred while \output is active
@@ -1034,16 +1067,16 @@ Overfull \hbox (9.38701pt too wide) has occurred while \output is active
 ]
 File: images/LogoMPT-PSL.png Graphic file (type png)
 <use images/LogoMPT-PSL.png>
-Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 157.
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 167.
 (pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
-
-Overfull \hbox (77.50526pt too wide) in paragraph at lines 157--157
-[][]  
- []
-
+<images/trifecta.png, id=130, 501.875pt x 276.03125pt>
+File: images/trifecta.png Graphic file (type png)
+<use images/trifecta.png>
+Package pdftex.def Info: images/trifecta.png  used on input line 167.
+(pdftex.def)             Requested size: 215.10196pt x 118.30783pt.
 File: images/LogoMPT-PSL.png Graphic file (type png)
 <use images/LogoMPT-PSL.png>
-Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 157.
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 167.
 (pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
 
 Overfull \hbox (9.38701pt too wide) has occurred while \output is active
@@ -1051,6 +1084,144 @@ Overfull \hbox (9.38701pt too wide) has occurred while \output is active
  []
 
 [12
+
+ <./images/trifecta.png>]
+File: images/LogoMPT-PSL.png Graphic file (type png)
+<use images/LogoMPT-PSL.png>
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 177.
+(pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
+File: images/LogoMPT-PSL.png Graphic file (type png)
+<use images/LogoMPT-PSL.png>
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 177.
+(pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
+
+Overfull \hbox (9.38701pt too wide) has occurred while \output is active
+[] 
+ []
+
+[13
+
+]
+File: images/LogoMPT-PSL.png Graphic file (type png)
+<use images/LogoMPT-PSL.png>
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 185.
+(pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
+File: images/LogoMPT-PSL.png Graphic file (type png)
+<use images/LogoMPT-PSL.png>
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 185.
+(pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
+
+Overfull \hbox (9.38701pt too wide) has occurred while \output is active
+[] 
+ []
+
+[14
+
+]
+File: images/LogoMPT-PSL.png Graphic file (type png)
+<use images/LogoMPT-PSL.png>
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 192.
+(pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
+File: images/LogoMPT-PSL.png Graphic file (type png)
+<use images/LogoMPT-PSL.png>
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 192.
+(pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
+
+Overfull \hbox (9.38701pt too wide) has occurred while \output is active
+[] 
+ []
+
+[15
+
+]
+File: images/LogoMPT-PSL.png Graphic file (type png)
+<use images/LogoMPT-PSL.png>
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 201.
+(pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
+</home/admin-sbraik/Documents/InternshipProduction/FlowMatching/FlowMatchingFramework.png, id=163, 694.595pt x 569.12625pt>
+File: /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/FlowMatchingFramework.png Graphic file (type png)
+<use /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/FlowMatchingFramework.png>
+Package pdftex.def Info: /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/FlowMatchingFramework.png  used on input line 201.
+(pdftex.def)             Requested size: 276.559pt x 226.60437pt.
+File: images/LogoMPT-PSL.png Graphic file (type png)
+<use images/LogoMPT-PSL.png>
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 201.
+(pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
+
+Overfull \hbox (9.38701pt too wide) has occurred while \output is active
+[] 
+ []
+
+[16
+
+ </home/admin-sbraik/Documents/InternshipProduction/FlowMatching/FlowMatchingFramework.png>]
+File: images/LogoMPT-PSL.png Graphic file (type png)
+<use images/LogoMPT-PSL.png>
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 209.
+(pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
+File: images/LogoMPT-PSL.png Graphic file (type png)
+<use images/LogoMPT-PSL.png>
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 209.
+(pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
+
+Overfull \hbox (9.38701pt too wide) has occurred while \output is active
+[] 
+ []
+
+[17
+
+]
+File: images/LogoMPT-PSL.png Graphic file (type png)
+<use images/LogoMPT-PSL.png>
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 227.
+(pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
+File: images/LogoMPT-PSL.png Graphic file (type png)
+<use images/LogoMPT-PSL.png>
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 227.
+(pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
+
+Overfull \hbox (9.38701pt too wide) has occurred while \output is active
+[] 
+ []
+
+[18
+
+]
+File: images/LogoMPT-PSL.png Graphic file (type png)
+<use images/LogoMPT-PSL.png>
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 239.
+(pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
+File: images/LogoMPT-PSL.png Graphic file (type png)
+<use images/LogoMPT-PSL.png>
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 239.
+(pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
+
+Overfull \hbox (9.38701pt too wide) has occurred while \output is active
+[] 
+ []
+
+[19
+
+]
+File: images/LogoMPT-PSL.png Graphic file (type png)
+<use images/LogoMPT-PSL.png>
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 255.
+(pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
+
+Overfull \hbox (6.35008pt too wide) in paragraph at lines 255--255
+[][]  
+ []
+
+File: images/LogoMPT-PSL.png Graphic file (type png)
+<use images/LogoMPT-PSL.png>
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 255.
+(pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
+
+Overfull \hbox (9.38701pt too wide) has occurred while \output is active
+[] 
+ []
+
+[20
 
 ]
 \tf@nav=\write6
@@ -1067,29 +1238,22 @@ Overfull \hbox (9.38701pt too wide) has occurred while \output is active
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
 Package rerunfilecheck Info: File `pres.out' has not changed.
 (rerunfilecheck)             Checksum: 47949AC7C3DCEDDDEEFE3CD50587DDA1;103.
  ) 
 Here is how much of TeX's memory you used:
- 27735 strings out of 474222
- 544620 string characters out of 5748733
- 1937975 words of memory out of 5000000
- 49399 multiletter control sequences out of 15000+600000
+ 28458 strings out of 474222
+ 556596 string characters out of 5748733
+ 1938975 words of memory out of 5000000
+ 50085 multiletter control sequences out of 15000+600000
  571644 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 128i,25n,131p,583b,677s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-pdfTeX warning (dest): name{ODE} has been referenced but does not exist, replaced by a fixed one
-
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss0600.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsx1095.pfb>
-Output written on pres.pdf (12 pages, 1094863 bytes).
+ 128i,26n,131p,583b,677s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss0600.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsx1095.pfb>
+Output written on pres.pdf (20 pages, 1170709 bytes).
 PDF statistics:
- 216 PDF objects out of 1000 (max. 8388607)
- 133 compressed objects within 2 object streams
- 28 named destinations out of 1000 (max. 500000)
- 96 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 290 PDF objects out of 1000 (max. 8388607)
+ 185 compressed objects within 2 object streams
+ 47 named destinations out of 1000 (max. 500000)
+ 106 words of extra memory for PDF output out of 10000 (max. 10000000)
 
