@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.2.11)  5 MAY 2025 16:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.2.11)  6 MAY 2025 16:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -945,11 +945,11 @@ Overfull \hbox (9.38701pt too wide) has occurred while \output is active
 ]
 File: images/LogoMPT-PSL.png Graphic file (type png)
 <use images/LogoMPT-PSL.png>
-Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 96.
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 92.
 (pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
 File: images/LogoMPT-PSL.png Graphic file (type png)
 <use images/LogoMPT-PSL.png>
-Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 96.
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 92.
 (pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
 
 Overfull \hbox (9.38701pt too wide) has occurred while \output is active
@@ -961,25 +961,11 @@ Overfull \hbox (9.38701pt too wide) has occurred while \output is active
 ]
 File: images/LogoMPT-PSL.png Graphic file (type png)
 <use images/LogoMPT-PSL.png>
-Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 111.
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 104.
 (pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
-</home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_1.png, id=89, 578.16pt x 289.08pt>
-File: /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_1.png Graphic file (type png)
-<use /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_1.png>
-Package pdftex.def Info: /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_1.png  used on input line 111.
-(pdftex.def)             Requested size: 245.83282pt x 122.9125pt.
-</home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_2.png, id=90, 578.16pt x 289.08pt>
-File: /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_2.png Graphic file (type png)
-<use /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_2.png>
-Package pdftex.def Info: /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_2.png  used on input line 111.
-(pdftex.def)             Requested size: 245.83282pt x 122.9125pt.
-
-Overfull \vbox (4.49992pt too high) detected at line 111
- []
-
 File: images/LogoMPT-PSL.png Graphic file (type png)
 <use images/LogoMPT-PSL.png>
-Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 111.
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 104.
 (pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
 
 Overfull \hbox (9.38701pt too wide) has occurred while \output is active
@@ -988,28 +974,28 @@ Overfull \hbox (9.38701pt too wide) has occurred while \output is active
 
 [8
 
- </home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_1.png> </home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_2.png>]
+]
 File: images/LogoMPT-PSL.png Graphic file (type png)
 <use images/LogoMPT-PSL.png>
-Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 124.
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 119.
 (pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
-</home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_3.png, id=100, 578.16pt x 289.08pt>
-File: /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_3.png Graphic file (type png)
-<use /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_3.png>
-Package pdftex.def Info: /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_3.png  used on input line 124.
+</home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_1.png, id=96, 578.16pt x 289.08pt>
+File: /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_1.png Graphic file (type png)
+<use /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_1.png>
+Package pdftex.def Info: /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_1.png  used on input line 119.
 (pdftex.def)             Requested size: 245.83282pt x 122.9125pt.
-</home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_4.png, id=101, 578.16pt x 289.08pt>
-File: /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_4.png Graphic file (type png)
-<use /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_4.png>
-Package pdftex.def Info: /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_4.png  used on input line 124.
+</home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_2.png, id=97, 578.16pt x 289.08pt>
+File: /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_2.png Graphic file (type png)
+<use /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_2.png>
+Package pdftex.def Info: /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_2.png  used on input line 119.
 (pdftex.def)             Requested size: 245.83282pt x 122.9125pt.
 
-Overfull \vbox (4.49992pt too high) detected at line 124
+Overfull \vbox (4.49992pt too high) detected at line 119
  []
 
 File: images/LogoMPT-PSL.png Graphic file (type png)
 <use images/LogoMPT-PSL.png>
-Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 124.
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 119.
 (pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
 
 Overfull \hbox (9.38701pt too wide) has occurred while \output is active
@@ -1018,28 +1004,28 @@ Overfull \hbox (9.38701pt too wide) has occurred while \output is active
 
 [9
 
- </home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_3.png> </home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_4.png>]
+ </home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_1.png> </home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_2.png>]
 File: images/LogoMPT-PSL.png Graphic file (type png)
 <use images/LogoMPT-PSL.png>
-Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 138.
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 132.
 (pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
-</home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_5.png, id=111, 578.16pt x 289.08pt>
-File: /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_5.png Graphic file (type png)
-<use /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_5.png>
-Package pdftex.def Info: /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_5.png  used on input line 138.
+</home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_3.png, id=107, 578.16pt x 289.08pt>
+File: /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_3.png Graphic file (type png)
+<use /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_3.png>
+Package pdftex.def Info: /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_3.png  used on input line 132.
 (pdftex.def)             Requested size: 245.83282pt x 122.9125pt.
-</home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_6.png, id=112, 578.16pt x 289.08pt>
-File: /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_6.png Graphic file (type png)
-<use /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_6.png>
-Package pdftex.def Info: /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_6.png  used on input line 138.
+</home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_4.png, id=108, 578.16pt x 289.08pt>
+File: /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_4.png Graphic file (type png)
+<use /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_4.png>
+Package pdftex.def Info: /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_4.png  used on input line 132.
 (pdftex.def)             Requested size: 245.83282pt x 122.9125pt.
 
-Overfull \vbox (4.49992pt too high) detected at line 138
+Overfull \vbox (4.49992pt too high) detected at line 132
  []
 
 File: images/LogoMPT-PSL.png Graphic file (type png)
 <use images/LogoMPT-PSL.png>
-Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 138.
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 132.
 (pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
 
 Overfull \hbox (9.38701pt too wide) has occurred while \output is active
@@ -1048,14 +1034,28 @@ Overfull \hbox (9.38701pt too wide) has occurred while \output is active
 
 [10
 
- </home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_5.png> </home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_6.png>]
+ </home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_3.png> </home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_4.png>]
 File: images/LogoMPT-PSL.png Graphic file (type png)
 <use images/LogoMPT-PSL.png>
-Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 152.
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 146.
 (pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
+</home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_5.png, id=118, 578.16pt x 289.08pt>
+File: /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_5.png Graphic file (type png)
+<use /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_5.png>
+Package pdftex.def Info: /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_5.png  used on input line 146.
+(pdftex.def)             Requested size: 245.83282pt x 122.9125pt.
+</home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_6.png, id=119, 578.16pt x 289.08pt>
+File: /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_6.png Graphic file (type png)
+<use /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_6.png>
+Package pdftex.def Info: /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_6.png  used on input line 146.
+(pdftex.def)             Requested size: 245.83282pt x 122.9125pt.
+
+Overfull \vbox (4.49992pt too high) detected at line 146
+ []
+
 File: images/LogoMPT-PSL.png Graphic file (type png)
 <use images/LogoMPT-PSL.png>
-Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 152.
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 146.
 (pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
 
 Overfull \hbox (9.38701pt too wide) has occurred while \output is active
@@ -1064,19 +1064,14 @@ Overfull \hbox (9.38701pt too wide) has occurred while \output is active
 
 [11
 
-]
+ </home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_5.png> </home/admin-sbraik/Documents/InternshipProduction/FlowMatching/frames/frame_6.png>]
 File: images/LogoMPT-PSL.png Graphic file (type png)
 <use images/LogoMPT-PSL.png>
-Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 167.
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 160.
 (pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
-<images/trifecta.png, id=130, 501.875pt x 276.03125pt>
-File: images/trifecta.png Graphic file (type png)
-<use images/trifecta.png>
-Package pdftex.def Info: images/trifecta.png  used on input line 167.
-(pdftex.def)             Requested size: 215.10196pt x 118.30783pt.
 File: images/LogoMPT-PSL.png Graphic file (type png)
 <use images/LogoMPT-PSL.png>
-Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 167.
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 160.
 (pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
 
 Overfull \hbox (9.38701pt too wide) has occurred while \output is active
@@ -1085,14 +1080,19 @@ Overfull \hbox (9.38701pt too wide) has occurred while \output is active
 
 [12
 
- <./images/trifecta.png>]
+]
 File: images/LogoMPT-PSL.png Graphic file (type png)
 <use images/LogoMPT-PSL.png>
-Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 177.
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 175.
 (pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
+<images/LinkBetweenObjects.png, id=137, 527.9725pt x 295.1025pt>
+File: images/LinkBetweenObjects.png Graphic file (type png)
+<use images/LinkBetweenObjects.png>
+Package pdftex.def Info: images/LinkBetweenObjects.png  used on input line 175.
+(pdftex.def)             Requested size: 215.10196pt x 120.22731pt.
 File: images/LogoMPT-PSL.png Graphic file (type png)
 <use images/LogoMPT-PSL.png>
-Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 177.
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 175.
 (pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
 
 Overfull \hbox (9.38701pt too wide) has occurred while \output is active
@@ -1101,7 +1101,7 @@ Overfull \hbox (9.38701pt too wide) has occurred while \output is active
 
 [13
 
-]
+ <./images/LinkBetweenObjects.png>]
 File: images/LogoMPT-PSL.png Graphic file (type png)
 <use images/LogoMPT-PSL.png>
 Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 185.
@@ -1120,11 +1120,11 @@ Overfull \hbox (9.38701pt too wide) has occurred while \output is active
 ]
 File: images/LogoMPT-PSL.png Graphic file (type png)
 <use images/LogoMPT-PSL.png>
-Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 192.
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 193.
 (pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
 File: images/LogoMPT-PSL.png Graphic file (type png)
 <use images/LogoMPT-PSL.png>
-Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 192.
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 193.
 (pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
 
 Overfull \hbox (9.38701pt too wide) has occurred while \output is active
@@ -1136,16 +1136,11 @@ Overfull \hbox (9.38701pt too wide) has occurred while \output is active
 ]
 File: images/LogoMPT-PSL.png Graphic file (type png)
 <use images/LogoMPT-PSL.png>
-Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 201.
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 200.
 (pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
-</home/admin-sbraik/Documents/InternshipProduction/FlowMatching/FlowMatchingFramework.png, id=163, 694.595pt x 569.12625pt>
-File: /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/FlowMatchingFramework.png Graphic file (type png)
-<use /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/FlowMatchingFramework.png>
-Package pdftex.def Info: /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/FlowMatchingFramework.png  used on input line 201.
-(pdftex.def)             Requested size: 276.559pt x 226.60437pt.
 File: images/LogoMPT-PSL.png Graphic file (type png)
 <use images/LogoMPT-PSL.png>
-Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 201.
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 200.
 (pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
 
 Overfull \hbox (9.38701pt too wide) has occurred while \output is active
@@ -1154,11 +1149,16 @@ Overfull \hbox (9.38701pt too wide) has occurred while \output is active
 
 [16
 
- </home/admin-sbraik/Documents/InternshipProduction/FlowMatching/FlowMatchingFramework.png>]
+]
 File: images/LogoMPT-PSL.png Graphic file (type png)
 <use images/LogoMPT-PSL.png>
 Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 209.
 (pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
+</home/admin-sbraik/Documents/InternshipProduction/FlowMatching/FlowMatchingFramework.png, id=170, 694.595pt x 569.12625pt>
+File: /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/FlowMatchingFramework.png Graphic file (type png)
+<use /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/FlowMatchingFramework.png>
+Package pdftex.def Info: /home/admin-sbraik/Documents/InternshipProduction/FlowMatching/FlowMatchingFramework.png  used on input line 209.
+(pdftex.def)             Requested size: 276.559pt x 226.60437pt.
 File: images/LogoMPT-PSL.png Graphic file (type png)
 <use images/LogoMPT-PSL.png>
 Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 209.
@@ -1170,14 +1170,14 @@ Overfull \hbox (9.38701pt too wide) has occurred while \output is active
 
 [17
 
-]
+ </home/admin-sbraik/Documents/InternshipProduction/FlowMatching/FlowMatchingFramework.png>]
 File: images/LogoMPT-PSL.png Graphic file (type png)
 <use images/LogoMPT-PSL.png>
-Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 227.
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 217.
 (pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
 File: images/LogoMPT-PSL.png Graphic file (type png)
 <use images/LogoMPT-PSL.png>
-Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 227.
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 217.
 (pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
 
 Overfull \hbox (9.38701pt too wide) has occurred while \output is active
@@ -1189,11 +1189,11 @@ Overfull \hbox (9.38701pt too wide) has occurred while \output is active
 ]
 File: images/LogoMPT-PSL.png Graphic file (type png)
 <use images/LogoMPT-PSL.png>
-Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 239.
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 240.
 (pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
 File: images/LogoMPT-PSL.png Graphic file (type png)
 <use images/LogoMPT-PSL.png>
-Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 239.
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 240.
 (pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
 
 Overfull \hbox (9.38701pt too wide) has occurred while \output is active
@@ -1205,16 +1205,11 @@ Overfull \hbox (9.38701pt too wide) has occurred while \output is active
 ]
 File: images/LogoMPT-PSL.png Graphic file (type png)
 <use images/LogoMPT-PSL.png>
-Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 255.
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 252.
 (pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
-
-Overfull \hbox (6.35008pt too wide) in paragraph at lines 255--255
-[][]  
- []
-
 File: images/LogoMPT-PSL.png Graphic file (type png)
 <use images/LogoMPT-PSL.png>
-Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 255.
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 252.
 (pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
 
 Overfull \hbox (9.38701pt too wide) has occurred while \output is active
@@ -1222,6 +1217,75 @@ Overfull \hbox (9.38701pt too wide) has occurred while \output is active
  []
 
 [20
+
+]
+File: images/LogoMPT-PSL.png Graphic file (type png)
+<use images/LogoMPT-PSL.png>
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 265.
+(pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
+File: images/LogoMPT-PSL.png Graphic file (type png)
+<use images/LogoMPT-PSL.png>
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 265.
+(pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
+
+Overfull \hbox (9.38701pt too wide) has occurred while \output is active
+[] 
+ []
+
+[21
+
+]
+File: images/LogoMPT-PSL.png Graphic file (type png)
+<use images/LogoMPT-PSL.png>
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 272.
+(pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
+File: images/LogoMPT-PSL.png Graphic file (type png)
+<use images/LogoMPT-PSL.png>
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 272.
+(pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
+
+Overfull \hbox (9.38701pt too wide) has occurred while \output is active
+[] 
+ []
+
+[22
+
+]
+File: images/LogoMPT-PSL.png Graphic file (type png)
+<use images/LogoMPT-PSL.png>
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 287.
+(pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
+File: images/LogoMPT-PSL.png Graphic file (type png)
+<use images/LogoMPT-PSL.png>
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 287.
+(pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
+
+Overfull \hbox (9.38701pt too wide) has occurred while \output is active
+[] 
+ []
+
+[23
+
+]
+File: images/LogoMPT-PSL.png Graphic file (type png)
+<use images/LogoMPT-PSL.png>
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 303.
+(pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
+
+Overfull \hbox (6.35008pt too wide) in paragraph at lines 303--303
+[][]  
+ []
+
+File: images/LogoMPT-PSL.png Graphic file (type png)
+<use images/LogoMPT-PSL.png>
+Package pdftex.def Info: images/LogoMPT-PSL.png  used on input line 303.
+(pdftex.def)             Requested size: 47.34717pt x 15.22266pt.
+
+Overfull \hbox (9.38701pt too wide) has occurred while \output is active
+[] 
+ []
+
+[24
 
 ]
 \tf@nav=\write6
@@ -1242,18 +1306,18 @@ Package rerunfilecheck Info: File `pres.out' has not changed.
 (rerunfilecheck)             Checksum: 47949AC7C3DCEDDDEEFE3CD50587DDA1;103.
  ) 
 Here is how much of TeX's memory you used:
- 28458 strings out of 474222
- 556596 string characters out of 5748733
+ 28476 strings out of 474222
+ 556862 string characters out of 5748733
  1938975 words of memory out of 5000000
- 50085 multiletter control sequences out of 15000+600000
+ 50095 multiletter control sequences out of 15000+600000
  571644 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,26n,131p,583b,677s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss0600.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsx1095.pfb>
-Output written on pres.pdf (20 pages, 1170709 bytes).
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss0600.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfss1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsx1095.pfb>
+Output written on pres.pdf (24 pages, 1197038 bytes).
 PDF statistics:
- 290 PDF objects out of 1000 (max. 8388607)
- 185 compressed objects within 2 object streams
- 47 named destinations out of 1000 (max. 500000)
+ 326 PDF objects out of 1000 (max. 8388607)
+ 210 compressed objects within 3 object streams
+ 55 named destinations out of 1000 (max. 500000)
  106 words of extra memory for PDF output out of 10000 (max. 10000000)
 
