@@ -29,7 +29,7 @@
 \section{Introduction}
 
 \begin{frame}
-    We denote by \(p\) the target distribution and \(q\) an easy-to-sample distribution, for example a centered Gaussian.
+    We denote by \(p\) the target distribution and \(q\) an easy-to-sample distribution, for example a centered Gaussian. The goal is to learn the distribution \(p\) ans sample from it.\\
 \end{frame}
 
 \begin{frame}{Diffusion}
@@ -84,7 +84,7 @@
 \end{frame}
 
 \begin{frame}{Normalizing flow}
-    An early instances  of normalizinf flow is the planar flow 
+    An early instances  of normalizing flow is the planar flow 
     \begin{align*}
         \phi_k(x)=x+\sigma(b_k^\intercal x+c)a_k
     \end{align*}
@@ -185,7 +185,7 @@
 \end{frame}
 
 \begin{frame}{Flow matching}
-    Given a particular data sample \(x_1\) from \(q\), we introduce a conditional probability path \(p_t(x|x_1)\) such that at time \(t=0\) \(p_0(x|x_1)=q(x)\) and by marginalizing over \(x_1\) we can recover the marginal probability path 
+    Given a particular data sample \(x_1\) from \(p\), we introduce a conditional probability path \(p_t(x|x_1)\) such that at time \(t=0\) \(p_0(x|x_1)=q(x)\) and by marginalizing over \(x_1\) we can recover the marginal probability path 
     \begin{align}
         p_t(x)=\int p_t(x|x_1)p(x_1)dx_1
     \end{align}
@@ -274,7 +274,7 @@
 \begin{frame}{Link between normalizing flow and flow matching}
     When considering a transformation \(\phi(x)=x+\frac{1}{K}v(x)\) in the normalizing flow context, we can re-arrange the equation to obtain
     \begin{align*}
-        \frac{\phi(x)-x}{1/K}
+        \frac{\phi(x)-x}{1/K}=v(x)
     \end{align*}
     Taking the limit \(K\rightarrow \infty\) gives us the ODE
     \begin{align*}
@@ -293,9 +293,9 @@
         \hline
         Models & Pros & Cons \\
         \hline
-        Diffusion & 1.2 & Only works with Gaussian \\
+        Diffusion & \makecell{Easy to train} & \makecell{Hard to sample (solve a SDE) \\Only works with Gaussian} \\
         Normalizing flow & \makecell{Exact density estimation} & \makecell{Computationally intensive \\Not expressive} \\ 
-        Flow matching & \makecell{Exact density estimation \\ Simulation free training}  & \makecell{test}\\
+        Flow matching & \makecell{Exact density estimation \\ Simulation free training \\Easy to sample}  & \makecell{test}\\
         Kernel estimator & \makecell{Flexible Easy to exploit}  & \makecell{Slow rate of convergence \\ Hard to evaluate at new data point \\ Hard to choose tuning parameters \\ Need a lot of data}\\
         \hline
     \end{tabular}
