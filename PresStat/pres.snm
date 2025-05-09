@@ -1,7 +1,7 @@
-\beamer@slide {alg:flow_matching_training}{8}
-\beamer@slide {alg:flow_matching_sampling}{9}
-\beamer@slide {fig:interpolated_density}{13}
-\beamer@slide {fig:flow_matching}{15}
-\beamer@slide {fig:flow_matching_full}{19}
-\beamer@slide {alg:flow_matching_training}{21}
-\beamer@slide {alg:flow_matching_sampling}{22}
+\beamer@slide {fig:interpolated_density}{11}
+\beamer@slide {fig:flow_matching}{13}
+\beamer@slide {fig:flow_matching_full}{17}
+\beamer@slide {alg:flow_matching_training}{19}
+\beamer@slide {alg:flow_matching_sampling}{20}
+\beamer@slide {alg:diffusion_training}{23}
+\beamer@slide {alg:diffusion_sampling}{23}

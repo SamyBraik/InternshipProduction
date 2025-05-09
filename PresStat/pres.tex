@@ -15,6 +15,7 @@
 \usepackage[noend]{algpseudocode}
 \usepackage{float}
 \usepackage{makecell}
+\usepackage{comment}
 
 \title{Statistical Methods}
 \author{Samy Braik}
@@ -29,7 +30,7 @@
 \section{Introduction}
 
 \begin{frame}
-    We denote by \(p\) the target distribution and \(q\) an easy-to-sample distribution, for example a centered Gaussian. The goal is to learn the distribution \(p\) ans sample from it.\\
+    We denote by \(p\) the target distribution and \(q\) an easy-to-sample distribution, for example a centered Gaussian. The goal is to learn the distribution \(p\) and sample from it.\\
 \end{frame}
 
 \begin{frame}{Diffusion}
@@ -77,7 +78,7 @@
 \end{frame}
 
 \begin{frame}{Normalizing flow}
-    Let \(X_0\sim q\) and \(X_1\sim p\). We want to learn \(f_\theta\) such that \(X_1 \simeq f_\theta(X_0)=Z\sim p_Z\). To do that, we set a structure on \(f_\theta\), with \(\phi_1,\ldots,\phi_k\) simpler function (all parametrized by \(\theta\)) such that 
+    Let \(x_0\sim q\) and \(x_1\sim p\). We want to learn \(f_\theta\) such that \(x_1 \simeq f_\theta(x_0)=z\sim p_Z\). To do that, we set a structure on \(f_\theta\), with \(\phi_1,\ldots,\phi_k\) simpler function (all parametrized by \(\theta\)) such that 
     \[f_\theta=\phi_k\circ\ldots\circ \phi_1\] 
     We determine \(f_\theta\) by minimizing 
     \[\mathcal{L}_\text{NF}(\theta)= \mathbb{E}\left[-\log p_Z(f_\theta(x))-\log \left|\det \frac{\partial f_\theta}{\partial x}(x)\right|\right]\]
@@ -91,6 +92,7 @@
     where \(a_k,b_k\in\mathbb{R}^d, c\in\mathbb{R}\) and  \(\sigma:\mathbb{R}\rightarrow\mathbb{R}\) is a non-linear function.
 \end{frame}
 
+\begin{comment}
 \begin{frame}{Normalizing flow}
     \begin{algorithm}[H]
         \caption{Flow matching training}\label{alg:flow_matching_training}
@@ -120,6 +122,7 @@
             \end{algorithmic}
     \end{algorithm}
 \end{frame}
+\end{comment}
 
 \begin{frame}{Flow matching}
     We start by defining a probability density path
@@ -209,7 +212,7 @@
     \begin{align}
         \mathcal{L}_\text{FM}(\theta)=\mathbb{E}_{t,p_t(x)}\left[ \| v_t^\theta(x)-v_t(x)\|^2 \right]
     \end{align}
-    but we don't have acces to \(v_t\) and \(p_t\).
+    but we don't have access to \(v_t\) and \(p_t\).
     \bigskip
     To adress this problem, we introduce new objects. 
 \end{frame}
@@ -239,7 +242,7 @@
 \end{frame}
 
 \begin{frame}{Flow matching}
-    The new loss function, called conditional flow mathcing loss, is defined as
+    The new loss function, called conditional flow matching loss, is defined as
     \begin{align}
         \mathcal{L}_\text{CFM}(\theta)=\mathbb{E}_{t,p_t(x|x_1)}\left[ \| v_t^\theta(x|x_1)-v_t(x|x_1)\|^2 \right]
     \end{align}
@@ -295,12 +298,48 @@
 \end{frame}
 
 \begin{frame}{Link between diffusion and flow matching}
-    \begin{block}{Gaussian flow}
-
-        
-    \end{block}
+    Considering the forward SDE 
+    \begin{align*}
+        \frac{dx_t}{dt}= f(x,t)dt + g(t)B_t
+    \end{align*}
+    and the associated reverse SDE
+    \begin{align*}
+        \frac{dx_t}{dt}= \left( f(x,t)+\frac{1}{2}g(t)^2\nabla\log p_t(x) \right)dt + g(t)dB_t
+    \end{align*}
+    which has the same marginals \(p_t\) as the probability flow ODE
+    \begin{align*}
+        \frac{dx_t}{dt}=f(x,t)-\frac{1}{2}g(t)^2\nabla_x\log p_t(x)
+    \end{align*}
 \end{frame}
 
+\begin{frame}
+    \begin{algorithm}[H]
+        \caption{Diffusion training}\label{alg:diffusion_training}
+            \begin{algorithmic}
+                \State \textbf{Input:} dataset \(p\), noise \(q\)
+                \State Initialized \(s^\theta\)
+                \While{not converged}
+                    \State \(t\sim\mathcal{U}([0,1])\)
+                    \State \(x_1\sim p(x_1)\)
+                    \State \(x_t=p_t(x_t|x_1)\)
+                    \State Gradient step with \(\nabla_\theta \| s_t^\theta (x_t) -\nabla_{x_t}\log p_t(x_t|x_1) \|^2\)
+                \EndWhile
+                \State \textbf{Output:} \(s^\theta\)
+            \end{algorithmic}
+        \end{algorithm}
+
+
+        \begin{algorithm}[H]
+            \caption{Diffusion sampling}\label{alg:diffusion_sampling}
+            \begin{algorithmic}
+                \State \textbf{Input:} Trained \(s^\theta\)
+                \State \(x_0\sim p(x_0)\)
+                \State Solve numerically the SDE or the probability flow ODE
+                \State \textbf{Output:} \(x_1\)
+                \end{algorithmic}
+            \end{algorithm}
+
+\end{frame}
 \begin{frame}{Link between normalizing flow and flow matching}
     When considering a transformation \(\phi(x)=x+\frac{1}{K}v(x)\) in the normalizing flow context, we can re-arrange the equation to obtain
     \begin{align*}
@@ -324,8 +363,8 @@
         Models & Pros & Cons \\
         \hline
         Diffusion & \makecell{Easy to train} & \makecell{Hard to sample (solve a SDE) \\Only works with Gaussian} \\
-        Normalizing flow & \makecell{Exact density estimation} & \makecell{Computationally intensive \\Not expressive} \\ 
-        Flow matching & \makecell{Exact density estimation \\ Simulation free training \\Easy to sample}  & \makecell{test}\\
+        Normalizing flow & \makecell{Exact density estimation} & \makecell{Computationally intensive \\Less expressive} \\ 
+        Flow matching & \makecell{Exact density estimation \\ Simulation free training \\Easy to sample}  & \makecell{}\\
         Kernel estimator & \makecell{Flexible Easy to exploit}  & \makecell{Slow rate of convergence \\ Hard to evaluate at new data point \\ Hard to choose tuning parameters \\ Need a lot of data}\\
         \hline
     \end{tabular}
