@@ -91,6 +91,36 @@
     where \(a_k,b_k\in\mathbb{R}^d, c\in\mathbb{R}\) and  \(\sigma:\mathbb{R}\rightarrow\mathbb{R}\) is a non-linear function.
 \end{frame}
 
+\begin{frame}{Normalizing flow}
+    \begin{algorithm}[H]
+        \caption{Flow matching training}\label{alg:flow_matching_training}
+            \begin{algorithmic}
+                \State \textbf{Input:} dataset \(p\), noise \(q\)
+                \State Initialized \(v^\theta\)
+                \While{not converged}
+                    \State \(t\sim\mathcal{U}([0,1])\)
+                    \State \(x_1\sim p(x_1)\)
+                    \State \(x_0\sim q(x_0)\)
+                    \State \(x_t=\phi_t(x_0|x_1)\)
+                    \State Gradient step with \(\nabla_\theta \| v_t^\theta (x_t) -\dot{x}_t \|^2\)
+                \EndWhile
+                \State \textbf{Output:} \(v^\theta\)
+            \end{algorithmic}
+        \end{algorithm}
+\end{frame}
+
+\begin{frame}{Normalizing flow}
+    \begin{algorithm}[H]
+        \caption{Flow matching sampling}\label{alg:flow_matching_sampling}
+            \begin{algorithmic}
+                \State \textbf{Input:} Trained \(v^\theta\)
+                \State \(x_0\sim q(x_0)\)
+                \State Solve numerically the ODE \(\dot{x}_t=v_t^\theta(x_t)\)
+                \State \textbf{Output:} \(x_1\)
+            \end{algorithmic}
+    \end{algorithm}
+\end{frame}
+
 \begin{frame}{Flow matching}
     We start by defining a probability density path
     \begin{block}{Probability density path}
